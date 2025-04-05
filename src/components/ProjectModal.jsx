@@ -59,10 +59,9 @@ export default function ProjectModal({ opened, onClose, project }) {
         />
       </Group>
       
-      {/* Research */}
-      {project.extraImages.length > 0 && (
+      {project.research.length > 0 && (
         <>
-            <Divider my="sm" />
+          <Divider my="sm" />
           <Title order={3} mt="md">Research</Title>
           <Group spacing="sm" mt="xs" mb="md">
           <div
@@ -73,8 +72,8 @@ export default function ProjectModal({ opened, onClose, project }) {
         </>
       )}
 
-      {/* Styles */}
-      {project.extraImages.length > 0 && (
+      {/* styles */}
+      {project.styles.length > 0 && (
         <>
           <Title order={3} mt="md">Styles</Title>
           <Group spacing="sm" mt="xs" mb="md">

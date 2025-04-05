@@ -18,6 +18,8 @@ export default function Projects() {
       image: "/img/artportfolio-thumbnail.png",
       description: "A personal art portfolio showcasing collage artwork with a responsive gallery, a category filter, and a contact form. Built with React.js.",
       techStack: ["React.js", "HTML/CSS", "Illustrator", "Zustand", "Material UI", "Web3Forms", "Yet Another React Lightbox"],
+      research: [],
+      styles: [],
       overview: `
       This web project is showcasing my collage artwork.
       The goal was to create a minimalist design where a clean layout keeps the focus on the artwork.
@@ -82,30 +84,49 @@ export default function Projects() {
 
 
     {
-      title: "Note Taking Web App",
-      image: "/img/notetaker.jpg",
-      description: "React based web app to take class notes efficiently",
-      techStack: ["React.js", "HTML/CSS", "Zustand", "Mantine Component Library"],
-      overview: `
-      This web project is xxx Coursework ... jota kehitin eteenpäin
-      The goal was to xxx.
-      <br>
-      <br>
-      <ul>
-        <li>xx</li>
-        <li>yy</li>
-        <li>xxx</li>
-        <li>The frontend, hosted on Netlify, is built with React.js and styled using Mantine</li>
-      </ul>
-      `,
-      styles: `
-        Tyylit
-      `,
+      title: "NoteTaker 2.0",
+      image: "/img/notetaker-thumbnail.png",
+      description: "A React-based lecture note management app that allows users to save and retrieve courses and notes.",
+      research: [],
+      techStack: ["React.js", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
+      "overview": `
+
+    This note management app is a React project that was originally developed as a coursework assignment for a frontend course.
+    After completing the original version, I wanted to further develop the project with a more polished user interface and improved functionality.
+    NoteTaker 2.0 is an updated version of the app. Throughout the development of this project, I learned a lot about state management and component usage in React. 
+    <br>
+    <br>
+    The app is primarily designed for desktop use.
+    <br>
+    <br>
+
+    <h3>The original task</h3>
+    <ul>
+      <li>Save courses and class notes locally</li>
+      <li>Fetch courses and notes from a REST API</li>
+      <li>Add new courses and notes</li>
+      <li>Delete notes</li>
+      <li>Create notes within sessions, where each session is tied to a specific course</li>
+      <li>Prevent access to the note creation view if there are no courses in the system</li>
+      <li>Allow users to filter and view notes for a specific course using a dropdown menu</li>
+    </ul>
+    <br>
+    <h3>What's new in version 2.0</h3>
+    <ul>
+      <li>New UI with sidebar navigation and active page highlights</li>
+      <li>Improved usability with clearer instructions for user</li>
+      <li>Harmonized color palette and modern design</li>
+      <li>Fixed course creation ID issue: in the previous version, users had to provide the course ID when adding a new course</li>
+    </ul>
+    <br>
+    The frontend is built with React.js, Mantine component library, and Zustand for state management. React Router handles navigation, and the demo app is deployed on Netlify.
+  `,
+      styles: [],
       links: [
         { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" },
         { type: "demo", url: "https://notetaker2-demo.netlify.app/home", label: "Demo" }
       ],
-      extraImages: []
+      extraImages: ["/img/notetaker-layouts.png", "/img/notetaker-old.png", "/img/notetaker-styles.png"]
     }
   ];
 
