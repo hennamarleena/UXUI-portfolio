@@ -95,7 +95,7 @@ export default function Projects() {
         <li>xx</li>
         <li>yy</li>
         <li>xxx</li>
-        <li>The frontend, hosted on Netlify, is built with React.js and styled using Material UI</li>
+        <li>The frontend, hosted on Netlify, is built with React.js and styled using Mantine</li>
       </ul>
       `,
       styles: `
