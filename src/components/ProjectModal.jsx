@@ -1,4 +1,4 @@
-import { Modal, Image, Group, Anchor, Text, Title } from '@mantine/core';
+import { Modal, Image, Group, Anchor, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { Divider } from '@mantine/core';
 import { Badge } from '@mantine/core';
