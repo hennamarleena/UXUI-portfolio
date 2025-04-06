@@ -12,7 +12,8 @@ export default function ProjectModal({ opened, onClose, project }) {
       onClose={onClose} 
       title={project.title} 
       centered 
-      size={isMobile ? "95%" : "80%"} 
+      size="80%" 
+      fullScreen={isMobile ? true : false}
       padding="xl"
       overlayProps={{ blur: 3 }}
     >

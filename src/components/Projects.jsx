@@ -17,7 +17,7 @@ export default function Projects() {
       title: "Art Portfolio Website",
       image: "/img/artportfolio-thumbnail.png",
       description: "A personal art portfolio showcasing collage artwork with a responsive gallery, a category filter, and a contact form. Built with React.js.",
-      techStack: ["React.js", "HTML/CSS", "Illustrator", "Zustand", "Material UI", "Web3Forms", "Yet Another React Lightbox"],
+      techStack: ["React", "HTML/CSS", "Illustrator", "Zustand", "Material UI", "Web3Forms", "Yet Another React Lightbox", "Netlify"],
       research: [],
       styles: [],
       overview: `
@@ -36,8 +36,8 @@ export default function Projects() {
       The digital collages were created with Adobe Photoshop and Adobe Illustrator.  
       `,
       links: [
-        { type: "github", url: "https://github.com/hennamarleena/Portfolio", label: "GitHub" },
-        { type: "website", url: "https://hennamarleena.netlify.app/", label: "View Website" }
+        { type: "github", url: "https://github.com/hennamarleena/ArtPortfolio", label: "GitHub" },
+        { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" }
       ],
       extraImages: []
     },
@@ -88,7 +88,7 @@ export default function Projects() {
       image: "/img/notetaker-thumbnail.png",
       description: "A React-based lecture note management app that allows users to save and retrieve courses and notes.",
       research: [],
-      techStack: ["React.js", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
+      techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
       "overview": `
 
     This note management app is a React project that was originally developed as a coursework assignment for a frontend course.
