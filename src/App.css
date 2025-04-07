@@ -183,7 +183,7 @@ nav ul li a:hover {
   min-height: 70vh;
   padding-bottom: 100px;
   background-size: cover;
-  background-image: url("./src/img/bg-projects.png");
+  background-image: url("/img/bg-projects.png");
   width: auto;
   background-color: var(--background-color-darker);
   background-position: center;
