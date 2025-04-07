@@ -18,7 +18,7 @@ export default function About() {
 
     return (
       <section id="about" aria-labelledby="about-title">
-            <img
+            <Image
             radius="0"
             src={isSmallScreen ? "/img/about-img-sm.png" : "/img/about-img-lg.png"}
             alt="decorative image"
