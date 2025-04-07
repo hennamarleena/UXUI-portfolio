@@ -18,10 +18,15 @@ export default function About() {
 
     return (
       <section id="about" aria-labelledby="about-title">
-            <Image
-            radius="0"
+            <img
             src={isSmallScreen ? "/img/about-img-sm.png" : "/img/about-img-lg.png"}
             alt="decorative image"
+            style={{
+              display: "block",
+              borderRadius: 0,
+              maxWidth: "100%",
+              height: "auto"
+            }}
             />
             <div className="about-text">
                 <h2>HELLO I AM HENNA</h2>
