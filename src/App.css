@@ -292,9 +292,6 @@ nav ul li a:hover {
   footer {
     text-align: center;
   }
-  #about h2 {
-    font-size: 4rem;
-  }
   #contact div > img {
     max-height: 70vh;
   }
@@ -310,9 +307,6 @@ nav ul li a:hover {
 @media (max-width: 1200px) {
   .about-text {
     padding-bottom: 0;
-  }
-  #about h2 {
-    font-size: 3rem;
   }
   .about-text p {
     font-size: 1.2em;
@@ -347,17 +341,24 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 1300px) {
+    #about h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+    #about h2 {
+    font-size: 2.6rem;
+  }
+
+}
+
 
 @media (max-width: 1440px) {
-  #about img {
-    max-height: 40vh;
-  }
   .about-text {
       padding-left: 1em;
     }
-  #about h2 {
-    font-size: 2.8rem;
-  }
 }
 
 @media (max-width: 1600px) {
@@ -375,7 +376,7 @@ nav ul li a:hover {
 
 @media (max-width: 885px) {
   #about img {
-    max-height: 70vh;
+    max-height: 100vh;
   }
   #about {
     display: block;

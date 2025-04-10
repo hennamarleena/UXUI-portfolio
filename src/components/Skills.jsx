@@ -16,6 +16,7 @@ export default function Skills() {
               <li>Figma</li>
               <li>React & Javascript</li>
               <li>Adobe Illustrator</li>
+              <li>CSS</li>
             </ul>
           </Paper>
         </div>
@@ -25,7 +26,8 @@ export default function Skills() {
             <h3>Soft Skills</h3>
             <ul>
               <li>Solution-driven</li>
-              <li>Empathetic & user-focused</li>
+              <li>Empathetic</li>
+              <li>User-focused</li>
               <li>Detail-oriented</li>
               <li>Goal setting</li>
             </ul>
