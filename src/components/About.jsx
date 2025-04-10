@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Image } from "@mantine/core";
 
 export default function About() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
