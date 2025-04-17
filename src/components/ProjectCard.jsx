@@ -2,13 +2,26 @@ import { Card, Button, Image } from '@mantine/core';
 
 export default function ProjectCard({ projectData, onView }) {
   return (
-    <Card shadow="md" radius="0" style={{ width: '400px', maxWidth: '100%' }}>
+    <Card 
+      shadow="md" 
+      radius="0" 
+      style={{ 
+        width: '400px', 
+        maxWidth: '100%',
+        display: 'flex', 
+        flexDirection: 'column' 
+      }}>
 
       <Card.Section>
-        <Image src={projectData.image} alt={projectData.title} height={250} style={{ objectFit: 'cover' }} />
+        <Image 
+          src={projectData.image} 
+          alt={projectData.title} 
+          height={250} 
+          style={{ objectFit: 'cover' }} 
+          />
       </Card.Section>
 
-      <Card.Section style={{ padding: '20px' }}>
+      <Card.Section style={{ padding: '20px', flexGrow: 1 }}>
         <h3>{projectData.title}</h3>
         <p>{projectData.description}</p>
       </Card.Section>
