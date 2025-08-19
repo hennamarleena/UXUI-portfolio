@@ -8,6 +8,9 @@ export default function ProjectModal({ opened, onClose, project }) {
 
   return (
     <Modal 
+    removeScrollProps={{
+        allowPinchZoom: true,
+      }}
       opened={opened} 
       onClose={onClose} 
       title={project.title} 
