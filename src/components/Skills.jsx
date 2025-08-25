@@ -10,11 +10,11 @@ export default function Skills() {
       <div className="skills-content">
         <div className="skills-paper">
           <Paper shadow="md" radius="0" p="xl" style={{ backgroundColor: '#fff', height: '100%' }}>
-            <h3>Hard Skills</h3>
+            <h3>Technical skills</h3>
             <ul className='skills-list'>
-              <li>Visual composition & storytelling</li>
               <li>Figma</li>
-              <li>React & Javascript</li>
+              <li>React</li>
+              <li>Javascript</li>
               <li>Adobe Illustrator</li>
               <li>CSS</li>
             </ul>
@@ -23,12 +23,12 @@ export default function Skills() {
 
         <div className="skills-paper">
           <Paper shadow="md" radius="0" p="xl" style={{ backgroundColor: '#fff', height: '100%' }}>
-            <h3>Soft Skills</h3>
+            <h3>Core Strengths</h3>
             <ul>
+              <li>Layout & visual design</li>
               <li>Solution-driven</li>
-              <li>Empathetic</li>
-              <li>User-focused</li>
-              <li>Detail-oriented</li>
+              <li>Empathetic & user-centered</li>
+              <li>Attention to detail</li>
               <li>Goal setting</li>
             </ul>
           </Paper>
