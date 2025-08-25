@@ -26,13 +26,16 @@ a {
   transition: color 0.3s ease;
 }
 
+
+
 #header {
   background-color: var(--background-color-darker);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 1em 2em;
+  position: relative; 
+  z-index: 30; /* korkein z-index, jotta header ja otsikko näkyvät navin päällä */
 }
 
 #header h1 {
@@ -42,7 +45,21 @@ a {
   letter-spacing: 0.3ch;
   text-transform: uppercase;
   width: 100%;
+  z-index: 31; /* varmistaa että otsikko on headerin päällä */
+  position: relative; /* tarvitaan z-indexin toimimiseksi */
 }
+
+
+/* Piilota hamburgermenu isolla näytöllä */
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100; /* varmistaa että näkyy navin päällä */
+}
+
 
 #about h2,
 #skills h2,
@@ -82,11 +99,11 @@ nav ul {
 }
 
 nav ul li a {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: var(--text-color);
   font-weight: 400;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
   transition: background-color 0.3s ease;
   letter-spacing: 0.1ch;
 }
@@ -95,6 +112,25 @@ nav ul li a:hover {
   color: var(--background-color-white);
   background-color: var(--primary-blue);
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 15;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 /* ABOUT SECTION */
 #about {
@@ -227,6 +263,25 @@ nav ul li a:hover {
   padding-left: 20px;
 }
 
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3A95E8 !important;
+  color: var(--text-color);
+  font-weight: 500 !important;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2477c5 !important;
+  color: var(--background-color-white);
+}
+
+
+
 /* CONTACT SECTION */
 #contact {
   background-color: var(--background-color-white);
@@ -282,7 +337,6 @@ nav ul li a:hover {
   padding: 2vh 5vh 1vh;
   color: var(--text-color);
 }
-
 
 
 /*  */
@@ -419,22 +473,31 @@ nav ul li a:hover {
     padding-bottom: 5em;
   }
   #header h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  #header {
-    flex-direction: column;
-  }
+
   nav {
     flex-direction: column;
     text-align: center;
     padding-bottom: 2em;
     padding-top: 0em;
     font-size: 1em;
+    display: none;
     width: 100%;
+    position: absolute;
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: var(--background-color-darker);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 20;
   }
+
   nav ul {
     flex-direction: column;
     padding-top: 10px;
@@ -477,9 +540,51 @@ nav ul li a:hover {
     padding-left: 0;
     padding-right: 0;
   }
+
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    padding: 1em 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav ul li a {
+    display: block;
+    background-color: var(--primary-blue);
+    color: var(--background-color-white);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: #3A95E8;
+  }
+    nav.open {
+    transform: translateX(0);
+  }
+
+
 }
-
-
-
-
 
