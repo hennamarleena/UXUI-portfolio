@@ -2,6 +2,8 @@ import { Modal, Image, Group, Anchor, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { Divider } from '@mantine/core';
 import { Badge } from '@mantine/core';
+import { Button } from '@mantine/core';
+
 
 export default function ProjectModal({ opened, onClose, project }) {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -25,8 +27,30 @@ export default function ProjectModal({ opened, onClose, project }) {
         src={project.image} 
         alt={project.title} 
         height={"100%"} 
-        style={{ objectFit: 'cover', marginBottom: '20px' }} 
+        style={{ objectFit: 'cover', marginBottom: '40px' }} 
       />
+
+      {/* Linkit */}
+      
+    <Group spacing="sm" mt="xs" mb="md">
+  {project.links.map((link, index) => (
+    <Button
+      key={index}
+      component="a"
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-primary"
+      size="md"
+      radius="xl"
+    >
+      {link.label}
+    </Button>
+  ))}
+</Group>
+
+      <Divider my="sm" />
+
 
       {/* Käytetyt teknologiat */}
       <Title order={3} mt="md">Technologies used</Title>
@@ -37,23 +61,6 @@ export default function ProjectModal({ opened, onClose, project }) {
       </Group>
       <Divider my="sm" />
 
-      {/* Linkit */}
-      <Title order={3} mt="md">Project links</Title>
-      <Group spacing="sm" mt="xs" mb="md">
-        {project.links.map((link, index) => (
-          <Anchor 
-            key={index} 
-            href={link.url} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            c="blue"
-          >
-            {link.label}
-          </Anchor>
-        ))}
-      </Group>
-
-      <Divider my="sm" />
 
       {/* Overview */}
       <Title order={3} mt="md">Overview</Title>

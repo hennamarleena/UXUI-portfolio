@@ -26,11 +26,12 @@ export default function ProjectCard({ projectData, onView }) {
         <p>{projectData.description}</p>
       </Card.Section>
 
-      <Card.Section style={{ padding: '10px 20px 20px', textAlign: 'center' }}>
+      <Card.Section style={{ padding: '10px 20px 35px', textAlign: 'center' }}>
         <Button 
           variant="filled" 
-          radius={0} 
-          color="#39C0D6" 
+          radius={25}
+          color="#39C0D6"
+          size="md" 
           onClick={() => onView(projectData)}
         >
           View

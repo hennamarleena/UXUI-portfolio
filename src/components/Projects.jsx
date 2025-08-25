@@ -36,8 +36,9 @@ export default function Projects() {
       The digital collages were created with Adobe Photoshop and Adobe Illustrator.  
       `,
       links: [
-        { type: "github", url: "https://github.com/hennamarleena/ArtPortfolio", label: "GitHub" },
-        { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" }
+        
+        { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" },
+        { type: "github", url: "https://github.com/hennamarleena/ArtPortfolio", label: "GitHub" }
       ],
       extraImages: []
     },
@@ -76,8 +77,8 @@ export default function Projects() {
         </ul>
       `,
       links: [
-        { type: "prototype", url: "https://www.figma.com/proto/lRk8TzGPxnD2tZiBrRXVWL/Neonwaves-mobile?node-id=1-2&p=f&t=g0oeUoMuAMxeBsL2-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2", label: "Figma mobile prototype" },
-        { type: "prototype", url: "https://www.figma.com/proto/SgYV3k6ymvQhQrs2T9xP1E/Neonwaves-desktop?t=apBmPUK2bVo8kPyt-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=136-2&starting-point-node-id=136%3A2", label: "Figma desktop prototype" }
+        { type: "prototype", url: "https://www.figma.com/proto/lRk8TzGPxnD2tZiBrRXVWL/Neonwaves-mobile?node-id=1-2&p=f&t=g0oeUoMuAMxeBsL2-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2", label: "View mobile prototype" },
+        { type: "prototype", url: "https://www.figma.com/proto/SgYV3k6ymvQhQrs2T9xP1E/Neonwaves-desktop?t=apBmPUK2bVo8kPyt-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=136-2&starting-point-node-id=136%3A2", label: "View desktop prototype" }
       ],
       extraImages: ["/img/neonwaves-wireframes.jpg", "/img/neonwaves-layouts.jpg", "/img/neonwaves-styles.jpg",]
     },
@@ -123,8 +124,8 @@ export default function Projects() {
   `,
       styles: [],
       links: [
-        { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" },
-        { type: "demo", url: "https://notetaker2-demo.netlify.app/home", label: "Demo" }
+        { type: "demo", url: "https://notetaker2-demo.netlify.app/home", label: "View demo website" },
+        { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" }
       ],
       extraImages: ["/img/notetaker-layouts.png", "/img/notetaker-old.png", "/img/notetaker-styles.png"]
     }
