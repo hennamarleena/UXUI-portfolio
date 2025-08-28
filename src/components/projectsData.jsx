@@ -20,8 +20,6 @@ const projects = [
     overview: `
       <p>This web project showcases my collage artwork. The goal was to create a minimalist design where a clean layout keeps the focus on the artwork.</p>
       
-      <br>
-
       <ul>
         <li>Dynamic grid layout that adapts to different screen sizes</li>
         <li>Category-based filtering for collage types</li>
@@ -30,15 +28,13 @@ const projects = [
         <li>Zustand for state management, React Router for navigation</li>
       </ul>
 
-      <br>
-
       <p>The digital collages were created with Adobe Photoshop and Adobe Illustrator.</p>
     `,
     links: [
-      { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" },
+      { type: "website", url: "https://x.netlify.app/", label: "View website" },
       {
         type: "github",
-        url: "https://github.com/hennamarleena/ArtPortfolio",
+        url: "https://github.com/x/ArtPortfolio",
         label: "GitHub",
       },
     ],
@@ -68,7 +64,6 @@ const projects = [
       I analysed several festival websites and identified trends and effective solutions that I could apply to the project. 
       The following features were implemented to support the project goal:
       </p>
-      <br>
       <ul>
         <li>Persistent ticket purchase links in the header and footer for easy access.</li>
         <li>Collapsible info sections for a cleaner layout</li>
@@ -82,7 +77,6 @@ const projects = [
       I wanted to evoke the essence of electronic music through vibrant neon hues and smooth, flowing graphic elements. 
       I used rounded corners and circular shapes to create more fluid and dynamic visual style reinforcing a sense of movement.
       </p>
-      <br>
       <ul>
         <li>Artist images and photographs generated with Adobe Firefly AI</li>
         <li>Graphics were designed using Adobe Illustrator</li>
@@ -143,11 +137,7 @@ const projects = [
         NoteTaker 2.0 is an updated version of the app. 
         Throughout the development of this project, I learned a lot about state management and component usage in React. I used ChatGPT with technical problem solving.</p>
 
-      <br>
-
       <p>The app is primarily designed for desktop use.</p>
-
-      <br>
 
       <h4>The original requirements</h4>
       <ul>
@@ -159,8 +149,6 @@ const projects = [
         <li>Filter notes by course using a dropdown menu</li>
       </ul>
 
-      <br>
-
       <h4>What's new in version 2.0</h4>
       <ul>
         <li>New UI with sidebar navigation and active page highlights</li>
@@ -168,8 +156,6 @@ const projects = [
         <li>Harmonized color palette and modern design</li>
         <li>Fixed course creation ID issue: in the previous version, users had to provide the course ID when adding a new course.</li>
       </ul>
-
-      <br>
       
       <p>
         The frontend is built with React.js, Mantine component library, and Zustand for state management. 
@@ -179,8 +165,8 @@ const projects = [
     research: [],
     styles: [],
     links: [
-      { type: "demo", url: "https://notetaker2-demo.netlify.app", label: "View demo website" },
-      { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" },
+      { type: "demo", url: "https://x-demo.netlify.app", label: "View demo website" },
+      { type: "github", url: "https://github.com/x/x-2.0", label: "GitHub" },
     ],
     extraSections: [
       {

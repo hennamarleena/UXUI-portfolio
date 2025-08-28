@@ -60,21 +60,35 @@ export default function ProjectPage() {
   return (
     <Container size="xl" px="md" py="xl">
       {/* Back button */}
+
       <Button
-        variant="light"
-        onClick={handleBack}
-        style={{
-          border: "1px solid #228BE6",
-          marginBottom: '20px',
-          color: '#228BE6',
-          backgroundColor: "transparent",
-        }}
-      >
-        ← Back
-      </Button>
+      variant="light"
+      onClick={handleBack}
+      style={{
+        border: "1px solid #228BE6",
+        marginBottom: '20px',
+        color: '#228BE6',
+        backgroundColor: "transparent",
+        fontWeight: 500,
+        fontSize: '1.05rem',
+        padding: '0.6em 1.2em',
+      }}
+    >
+      ← Back
+    </Button>
+
 
       {/* Hero Section */}
-      <Title order={2} ta="center" mb="xl">{project.title}</Title>
+
+      <Title order={2} ta="center" mb="xl" style={{ 
+        fontFamily: 'Montserrat, sans-serif', 
+        fontWeight: 400, 
+        fontSize: '2.8rem', 
+        lineHeight: 1.2, 
+        color: '#333' 
+      }}>
+        {project.title}
+      </Title>
 
       {/* Links */}
       <Group spacing="md" mt="md" mb="xl" justify='center'>
@@ -99,8 +113,16 @@ export default function ProjectPage() {
       </Paper>
 
       {/* Technologies */}
-      <section style={{ marginBottom: '3rem' }}>
-        <Title order={3} mb="sm">Technologies</Title>
+      <section>
+
+        <Title order={3} mb="md" style={{
+          fontFamily: 'Montserrat, sans-serif',
+          lineHeight: 1.3,
+          color: '#444'
+        }}>
+          Technologies
+        </Title>
+
         <Group spacing="xs" mt="md">
           {project.techStack.map((tech, index) => (
             <Badge key={index} variant="outline" size='lg'>{tech}</Badge>
@@ -109,50 +131,53 @@ export default function ProjectPage() {
       </section>
 
       {/* Overview */}
-      <section style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+
+      <section className="project-overview" style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>
         <Title order={3} mb="sm">Overview</Title>
         <div dangerouslySetInnerHTML={{ __html: project.overview }} />
       </section>
 
+
       {/* Research */}
-      {project.research?.length > 0 && (
-        <section style={{ borderRadius: "1rem", marginBottom: '3rem' }}>
-          <Title order={3} mb="sm">Research</Title>
-          <div dangerouslySetInnerHTML={{ __html: project.research }} />
-        </section>
-      )}
+{project.research?.length > 0 && (
+  <section className="project-research" style={{ marginBottom: '1.5rem' }}>
+    <Title order={3} mb="sm">Research</Title>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<div style="line-height:1.8; color:#555; font-size:1.05rem;">${project.research}</div>`
+      }}
+    />
+  </section>
+)}
 
-      {/* Styles */}
-      {project.styles?.length > 0 && (
-        <section style={{ marginBottom: '3rem' }}>
-          <Title order={3} mb="sm">Styles</Title>
-          <div dangerouslySetInnerHTML={{ __html: project.styles }} />
-        </section>
-      )}
 
-      {/* Extra Sections */}
-      {project.extraSections?.map((section, i) => (
-        <section key={i} style={{ marginTop: '3rem', marginBottom: '3rem' }}>
-          {section.title && (
-            <Title order={3} mb="lg">{section.title}</Title>
-          )}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(600px, 1fr))',
-              gap: '20px'
-            }}
-          >
-            {section.images.map((img, index) => (
-              <ZoomableImage
-                key={index}
-                src={img}
-                alt={``}
-              />
-            ))}
-          </div>
-        </section>
+   {/* Styles */}
+{project.styles?.length > 0 && (
+  <section className="project-styles" style={{ marginBottom: '1.5rem' }}>
+    <Title order={3} mb="sm">Styles</Title>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<div style="line-height:1.8; color:#555; font-size:1.05rem;">${project.styles}</div>`
+      }}
+    />
+  </section>
+)}
+
+{/* Extra Sections */}
+{project.extraSections?.map((section, i) => (
+  <section key={i} className="extra-section">
+    {section.title && <Title order={3}>{section.title}</Title>}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(600px, 1fr))',
+      gap: '20px'
+    }}>
+      {section.images.map((img, index) => (
+        <ZoomableImage key={index} src={img} alt={section.title || ``} />
       ))}
+    </div>
+  </section>
+))}
     </Container>
   );
 }
