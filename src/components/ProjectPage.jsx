@@ -44,8 +44,8 @@ function ZoomableImage({ src, alt }) {
 
 export default function ProjectPage() {
   const { id } = useParams();
+  const project = projects.find(p => p.id === id);
   const navigate = useNavigate();
-  const project = projects[id];
 
   if (!project) return <p>Project not found</p>;
 

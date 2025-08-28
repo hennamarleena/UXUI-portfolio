@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: "art-portfolio",
     title: "Art Portfolio Website",
     image: "/img/artportfolio_thumbnail.png",
     description:
@@ -44,6 +45,8 @@ const projects = [
     extraSections: [],
   },
   {
+    
+    id: "festival-website",
     title: "Festival Website Concept",
     image: "/img/neonwaves-thumbnail.jpg",
     description:
@@ -119,6 +122,7 @@ const projects = [
 
   },
   {
+    id: "notetaker",
     title: "NoteTaker 2.0",
     image: "/img/notetaker_thumbnail.png",
     description:
