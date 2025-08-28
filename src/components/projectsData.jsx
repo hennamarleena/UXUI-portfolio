@@ -97,7 +97,7 @@ const projects = [
   {
     title: "Wireframes",
     images: [
-      "/img/neonwaves-wireframes.png"
+      { src: "/img/neonwaves-wireframes.png", fullWidth: true } // full-width
     ]
   },
   {

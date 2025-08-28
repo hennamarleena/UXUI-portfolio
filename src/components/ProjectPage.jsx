@@ -1,21 +1,19 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Image, Group, Badge, Button, Title, Text, Container, Paper, Modal } from '@mantine/core';
+import { Image, Group, Badge, Button, Title, Container, Paper, Modal } from '@mantine/core';
 import projects from './projectsData';
 
 // Zoomattava kuva-komponentti
 function ZoomableImage({ src, alt }) {
   const [opened, setOpened] = useState(false);
-
   return (
-     <>
+    <>
       <Image
         src={src}
         alt={alt}
-        fit="cover"
-        radius="sm"
+        fit="contain"
         onClick={() => setOpened(true)}
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: 'pointer', width: '100%', height: 'auto' }}
       />
 
       <Modal
@@ -28,14 +26,14 @@ function ZoomableImage({ src, alt }) {
         padding={0}
         styles={{
           modal: { maxWidth: '90vw', maxHeight: '90vh' },
-          body: { padding: 0, display: 'flex', justifyContent: 'center' }
+          body: { padding: 0, display: 'flex', justifyContent: 'center' },
         }}
       >
         <Image
           src={src}
           alt={alt}
           fit="contain"
-          style={{ maxHeight: '90vh', width: 'auto' }}
+          style={{ maxHeight: '90vh', width: '100%', height: 'auto' }}
         />
       </Modal>
     </>
@@ -44,7 +42,7 @@ function ZoomableImage({ src, alt }) {
 
 export default function ProjectPage() {
   const { id } = useParams();
-  const project = projects.find(p => p.id === id);
+  const project = projects.find((p) => p.id === id);
   const navigate = useNavigate();
 
   if (!project) return <p>Project not found</p>;
@@ -60,38 +58,40 @@ export default function ProjectPage() {
   return (
     <Container size="xl" px="md" py="xl">
       {/* Back button */}
-
       <Button
-      variant="light"
-      onClick={handleBack}
-      style={{
-        border: "1px solid #228BE6",
-        marginBottom: '20px',
-        color: '#228BE6',
-        backgroundColor: "transparent",
-        fontWeight: 500,
-        fontSize: '1.05rem',
-        padding: '0.6em 1.2em',
-      }}
-    >
-      ← Back
-    </Button>
-
+        variant="light"
+        onClick={handleBack}
+        style={{
+          border: '1px solid #228BE6',
+          marginBottom: '20px',
+          color: '#228BE6',
+          backgroundColor: 'transparent',
+          fontWeight: 500,
+          fontSize: '1.05rem',
+          padding: '0.6em 1.2em',
+        }}
+      >
+        ← Back
+      </Button>
 
       {/* Hero Section */}
-
-      <Title order={2} ta="center" mb="xl" style={{ 
-        fontFamily: 'Montserrat, sans-serif', 
-        fontWeight: 400, 
-        fontSize: '2.8rem', 
-        lineHeight: 1.2, 
-        color: '#333' 
-      }}>
+      <Title
+        order={2}
+        ta="center"
+        mb="xl"
+        style={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 400,
+          fontSize: '2.8rem',
+          lineHeight: 1.2,
+          color: '#333',
+        }}
+      >
         {project.title}
       </Title>
 
       {/* Links */}
-      <Group spacing="md" mt="md" mb="xl" justify='center'>
+      <Group spacing="md" mt="md" mb="xl" justify="center">
         {project.links.map((link, index) => (
           <Button
             key={index}
@@ -108,73 +108,81 @@ export default function ProjectPage() {
         ))}
       </Group>
 
+      {/* Project main image */}
       <Paper mb="xl" style={{ overflow: 'hidden' }}>
-        <Image src={project.image} alt={project.title} fit="cover" />
+        <Image
+          src={project.image}
+          alt={project.title}
+          fit="contain"
+          style={{ width: '100%', height: 'auto' }}
+        />
       </Paper>
 
       {/* Technologies */}
       <section>
-
-        <Title order={3} mb="md" style={{
-          fontFamily: 'Montserrat, sans-serif',
-          lineHeight: 1.3,
-          color: '#444'
-        }}>
+        <Title
+          order={3}
+          mb="md"
+          style={{ fontFamily: 'Montserrat, sans-serif', lineHeight: 1.3, color: '#444' }}
+        >
           Technologies
         </Title>
-
         <Group spacing="xs" mt="md">
           {project.techStack.map((tech, index) => (
-            <Badge key={index} variant="outline" size='lg'>{tech}</Badge>
+            <Badge key={index} variant="outline" size="lg">
+              {tech}
+            </Badge>
           ))}
         </Group>
       </section>
 
       {/* Overview */}
-
       <section className="project-overview" style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>
-        <Title order={3} mb="sm">Overview</Title>
+        <Title order={3} mb="sm">
+          Overview
+        </Title>
         <div dangerouslySetInnerHTML={{ __html: project.overview }} />
       </section>
 
-
       {/* Research */}
-{project.research?.length > 0 && (
-  <section className="project-research" style={{ marginBottom: '1.5rem' }}>
-    <Title order={3} mb="sm">Research</Title>
-    <div
-      dangerouslySetInnerHTML={{__html: project.research}}/>
-  </section>
-)}
+      {project.research?.length > 0 && (
+        <section className="project-research" style={{ marginBottom: '1.5rem' }}>
+          <Title order={3} mb="sm">
+            Research
+          </Title>
+          <div dangerouslySetInnerHTML={{ __html: project.research }} />
+        </section>
+      )}
 
+      {/* Styles */}
+      {project.styles?.length > 0 && (
+        <section className="project-styles" style={{ marginBottom: '1.5rem' }}>
+          <Title order={3} mb="sm">
+            Styles
+          </Title>
+          <div
+            dangerouslySetInnerHTML={{__html: project.styles}}/>
+        </section>
+      )}
 
-   {/* Styles */}
-{project.styles?.length > 0 && (
-  <section className="project-styles" style={{ marginBottom: '1.5rem' }}>
-    <Title order={3} mb="sm">Styles</Title>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `<div style="line-height:1.8; color:#555; font-size:1.05rem;">${project.styles}</div>`
-      }}
-    />
-  </section>
-)}
-
-{/* Extra Sections */}
-{project.extraSections?.map((section, i) => (
+      {/* Extra Sections */}
+      {project.extraSections?.map((section, i) => (
   <section key={i} className="extra-section">
     {section.title && <Title order={3}>{section.title}</Title>}
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(600px, 1fr))',
-      gap: '20px'
-    }}>
+
+    <div className="extra-grid">
       {section.images.map((img, index) => (
-        <ZoomableImage key={index} src={img} alt={section.title || ``} />
+        <div
+          className={`extra-grid-item ${img.fullWidth ? 'full-width' : ''}`}
+          key={index}
+        >
+          <ZoomableImage src={img.src || img} alt={section.title || ''} />
+        </div>
       ))}
     </div>
   </section>
 ))}
+
     </Container>
   );
 }
