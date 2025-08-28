@@ -9,11 +9,6 @@
   --background-color-darker: #F7F7EF;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
 body {
   line-height: 1.6;
   font-weight: 400;
@@ -21,12 +16,15 @@ body {
 }
 
 a {
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-
+button {
+  transition: background-color 0.3s ease !important;
+  cursor: pointer;
+}
 
 #header {
   background-color: var(--background-color-darker);
@@ -40,7 +38,7 @@ a {
 
 #header h1 {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-color);
   letter-spacing: 0.3ch;
   text-transform: uppercase;
@@ -56,7 +54,7 @@ a {
   font-size: 2em;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: "pointer";
   z-index: 100; /* varmistaa että näkyy navin päällä */
 }
 
@@ -98,9 +96,12 @@ nav ul {
   margin: 0;
 }
 
-nav ul li a {
+nav ul li button {
   font-size: 1.1em;
   color: var(--text-color);
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
   font-weight: 400;
   padding: 10px 20px;
   border-radius: 30px;
@@ -108,7 +109,7 @@ nav ul li a {
   letter-spacing: 0.1ch;
 }
 
-nav ul li a:hover {
+nav ul li button:hover {
   color: var(--background-color-white);
   background-color: var(--primary-blue);
 }
@@ -258,17 +259,12 @@ nav ul li a:hover {
   left: -6.3em;
   bottom: -30px;
 }
-
-.mantine-Modal-content ul {
-  padding-left: 20px;
-}
-
 .btn-primary {
   display: inline-block;
   padding: 10px 20px;
   background-color: #3A95E8 !important;
   color: var(--text-color);
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   border-radius: 50%;
   text-decoration: none;
   text-align: center;
@@ -280,6 +276,32 @@ nav ul li a:hover {
   color: var(--background-color-white);
 }
 
+h2.mantine-Title-root {
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h3.mantine-Title-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.mantine-Button-root .m_77c9d27d {
+  font-weight: 400 !important;
+}
+.mantine-Button-root .m_77c9d27d {
+  background-color: #33ADC1 !important;
+}
+
+.m_811560b9 {
+  border-radius: 100% !important;
+}
 
 
 /* CONTACT SECTION */
@@ -503,7 +525,7 @@ nav ul li a:hover {
     padding-top: 10px;
     gap: 20px;
   }
-  nav ul li a {
+  nav ul li button {
     background-color: var(--primary-blue);
     border-radius: 20px;
   }
@@ -567,7 +589,7 @@ nav ul li a:hover {
     list-style: none;
   }
 
-  nav ul li a {
+  nav ul li button {
     display: block;
     background-color: var(--primary-blue);
     color: var(--background-color-white);
@@ -578,8 +600,8 @@ nav ul li a:hover {
     transition: background-color 0.3s;
   }
 
-  nav ul li a:hover {
-    background-color: #3A95E8;
+  nav ul li button:hover {
+    background-color: #33ADC1;
   }
     nav.open {
     transform: translateX(0);

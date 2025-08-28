@@ -6,7 +6,7 @@ export default function ProjectCard({ projectData, onView }) {
       shadow="md" 
       radius="0" 
       style={{ 
-        width: '400px', 
+        width: '420px', 
         maxWidth: '100%',
         display: 'flex', 
         flexDirection: 'column' 
@@ -34,7 +34,7 @@ export default function ProjectCard({ projectData, onView }) {
           size="md" 
           onClick={() => onView(projectData)}
         >
-          View
+          Read more
         </Button>
       </Card.Section>
       

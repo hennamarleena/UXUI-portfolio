@@ -1,24 +1,25 @@
 import './App.css'
 import Header from './components/Header'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Skills from './components/Skills'
 import Footer from './components/Footer'
+import ProjectPage from './components/ProjectPage'
+import MainContent from './components/MainContent'
+import ScrollToTop from './components/ScrollToTop'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
- 
   return (
-    <>
-       <Header />
-       <main role="main">
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-       </main>
-       <Footer />
-    </>
+    <Router>
+      <Header />
+      <main role="main">
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/project/:id" element={<ProjectPage />} />
+          </Routes>
+        </ScrollToTop>
+      </main>
+      <Footer />
+    </Router>
   )
 }
 
