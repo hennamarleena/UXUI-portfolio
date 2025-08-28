@@ -17,6 +17,7 @@ export default function Skills() {
               <li>Javascript</li>
               <li>Adobe Illustrator</li>
               <li>CSS</li>
+              <li>AI-powered workflow</li>
             </ul>
           </Paper>
         </div>
@@ -27,7 +28,8 @@ export default function Skills() {
             <ul>
               <li>Layout & visual design</li>
               <li>Solution-driven</li>
-              <li>Empathetic & user-centered</li>
+              <li>User-centered</li>
+              <li>Empathetic</li>
               <li>Attention to detail</li>
               <li>Goal setting</li>
             </ul>
