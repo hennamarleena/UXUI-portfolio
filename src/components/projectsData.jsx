@@ -34,10 +34,10 @@ const projects = [
       <p>The digital collages were created with Adobe Photoshop and Adobe Illustrator.</p>
     `,
     links: [
-      { type: "website", url: "https://x.netlify.app/", label: "View website" },
+      { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" },
       {
         type: "github",
-        url: "https://github.com/x/ArtPortfolio",
+        url: "https://github.com/hennamarleena/ArtPortfolio",
         label: "GitHub",
       },
     ],
@@ -175,8 +175,8 @@ const projects = [
     research: [],
     styles: [],
     links: [
-      { type: "demo", url: "hx", label: "View demo website" },
-      { type: "github", url: "x", label: "GitHub" },
+      { type: "demo", url: "https://notetaker2-demo.netlify.app", label: "View demo website" },
+      { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" },
     ],
     extraSections: [
       {
