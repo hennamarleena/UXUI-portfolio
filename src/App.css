@@ -685,3 +685,49 @@ h3.mantine-Title-root {
 .project-overview h4 {
   margin-bottom: 0.4rem;
 }
+
+
+.project-overview p,
+.project-overview ul,
+.project-overview li,
+.project-overview h4 {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+.project-overview ul {
+  padding-left: 1.5rem;
+}
+
+.project-overview li {
+  margin-bottom: 0.2em;
+}
+.project-overview p,
+.project-overview ul,
+.project-overview li,
+.project-overview h4,
+.project-research p,
+.project-research ul,
+.project-research li,
+.project-styles p,
+.project-styles ul,
+.project-styles li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+.project-overview ul,
+.project-research ul,
+.project-styles ul {
+  padding-left: 1.5rem;
+}
+
+.project-overview li,
+.project-research li,
+.project-styles li {
+  margin-bottom: 0.2em;
+}

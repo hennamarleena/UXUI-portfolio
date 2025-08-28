@@ -31,10 +31,10 @@ const projects = [
       <p>The digital collages were created with Adobe Photoshop and Adobe Illustrator.</p>
     `,
     links: [
-      { type: "website", url: "https://x.netlify.app/", label: "View website" },
+      { type: "website", url: "https://hennamarleena.netlify.app/", label: "View website" },
       {
         type: "github",
-        url: "https://github.com/x/ArtPortfolio",
+        url: "https://github.com/hennamarleena/ArtPortfolio",
         label: "GitHub",
       },
     ],
@@ -51,8 +51,7 @@ const projects = [
       <p>
         A conceptual website project for a fictional electronic music and culture festival. 
         The aim was to design a website concept that embodies the festival's atmosphere, 
-        engages visitors, and inspires them to explore the event — ultimately leading to ticket purchases. 
-        The main goal of the website is to sell tickets.
+        engages visitors, and inspires them to explore the event, ultimately leading to ticket purchases. 
       </p>
     `,
     techStack: [
@@ -165,8 +164,8 @@ const projects = [
     research: [],
     styles: [],
     links: [
-      { type: "demo", url: "https://x-demo.netlify.app", label: "View demo website" },
-      { type: "github", url: "https://github.com/x/x-2.0", label: "GitHub" },
+      { type: "demo", url: "https://notetaker2-demo.netlify.app/", label: "View demo website" },
+      { type: "github", url: "https://github.com/hennamarleena/Notetaker-2.0", label: "GitHub" },
     ],
     extraSections: [
       {

@@ -143,10 +143,7 @@ export default function ProjectPage() {
   <section className="project-research" style={{ marginBottom: '1.5rem' }}>
     <Title order={3} mb="sm">Research</Title>
     <div
-      dangerouslySetInnerHTML={{
-        __html: `<div style="line-height:1.8; color:#555; font-size:1.05rem;">${project.research}</div>`
-      }}
-    />
+      dangerouslySetInnerHTML={{__html: project.research}}/>
   </section>
 )}
 
