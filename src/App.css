@@ -38,6 +38,9 @@ img {
   height: auto !important;
 }
 
+.mantine-Button-label {
+  overflow: visible !important;
+}
 
 #header {
   background-color: var(--background-color-darker);
@@ -696,8 +699,6 @@ h3.mantine-Title-root {
     transform: translateX(0);
   }
 }
-
-
 
 
 .extra-grid {

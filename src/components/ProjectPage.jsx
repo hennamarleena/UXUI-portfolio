@@ -67,8 +67,8 @@ export default function ProjectPage() {
           color: '#228BE6',
           backgroundColor: 'transparent',
           fontWeight: 500,
-          fontSize: '1.05rem',
-          padding: '0.6em 1.2em',
+          fontSize: '1rem',
+          padding: '0.5em 1em',
         }}
       >
         ← Back
