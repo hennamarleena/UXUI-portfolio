@@ -97,18 +97,18 @@ const projects = [
   {
     title: "Wireframes",
     images: [
-      { src: "/img/neonwaves-wireframes.png", fullWidth: true } // full-width
+      { src: "/img/neonwaves-wireframes.png", fullWidth: true, title: "Wireframes"  } // full-width
     ]
   },
   {
     title: "Layouts",
     images: [
-      "/img/neonwaves-home-view.png",
-      "/img/neonwaves-program-view.png",
-      "/img/neonwaves-tickets-view.png",
-      "/img/neonwaves-info-view.png",
-      "/img/neonwaves-styles-colorpalette.png",
-      "/img/neonwaves-styles-typography.png"
+        { src: "/img/neonwaves-home-view.png", title: "Home view" },
+        { src: "/img/neonwaves-program-view.png", title: "Program" },
+        { src: "/img/neonwaves-tickets-view.png", title: "Tickets" },
+        { src: "/img/neonwaves-info-view.png", title: "Info" },
+        { src: "/img/neonwaves-styles-colorpalette.png", title: "Color palette" },
+        { src: "/img/neonwaves-styles-typography.png", title: "Typography" },
     ]
   }
 ],
@@ -171,21 +171,21 @@ const projects = [
       {
         title: "Version 2.0",
         images: [
-          "/img/notetaker2-demo.netlify.app_home.png",
-          "/img/notetaker2-demo.netlify.app_addnotes.png",
-          "/img/notetaker2-demo.netlify.app_viewnotes.png",
-          "/img/notetaker2-demo.netlify.app_newcourse.png",
-          "/img/notetaker-styles-colorpalette.png",
-          "/img/notetaker-styles-typography.png",
+          { src: "/img/notetaker2-demo.netlify.app_home.png", title: "Home" },
+          { src: "/img/notetaker2-demo.netlify.app_addnotes.png", title: "Add notes" },
+          { src: "/img/notetaker2-demo.netlify.app_viewnotes.png", title: "View notes" },
+          { src: "/img/notetaker2-demo.netlify.app_newcourse.png", title: "Add a new course" },
+          { src: "/img/notetaker-styles-colorpalette.png", title: "Color palette" },
+          { src: "/img/notetaker-styles-typography.png", title: "Typography" }
         ]
       },
       {
         title: "Original Version",
         images: [
-          "/img/notetakerdemo.netlify.app_home.png",
-          "/img/notetakerdemo.netlify.app_createnotes.png",
-          "/img/notetakerdemo.netlify.app_listnotes.png",
-          "/img/notetakerdemo.netlify.app_addcourse.png",
+          { src: "/img/notetakerdemo.netlify.app_home.png", title: "Original version - Home view" },
+          { src: "/img/notetakerdemo.netlify.app_createnotes.png", title: "Original version - Create notes" },
+          { src: "/img/notetakerdemo.netlify.app_listnotes.png", title: "Original version - List notes" },
+          { src: "/img/notetakerdemo.netlify.app_addcourse.png", title: "Original version - Add courses" },
         ]
       }
     ],

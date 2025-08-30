@@ -17,18 +17,21 @@ function ZoomableImage({ src, alt }) {
       />
 
       <Modal
-        opened={opened}
-        onClose={() => setOpened(false)}
-        title={alt}
-        size="auto"
-        centered
-        overflow="inside"
-        padding={0}
-        styles={{
-          modal: { maxWidth: '90vw', maxHeight: '90vh' },
-          body: { padding: 0, display: 'flex', justifyContent: 'center' },
-        }}
-      >
+      opened={opened}
+      onClose={() => setOpened(false)}
+      withCloseButton={true}
+      size="auto"
+      centered
+      overflow="inside"
+      padding={0}
+      styles={{
+        header: { padding: '5px 10px', borderBottom: '1px solid #ddd' },
+        title: { fontSize: '1.1rem', fontWeight: 500, color: '#333' },
+        modal: { maxWidth: '95vw', maxHeight: '95vh' },
+        body: { padding: 0, display: 'flex', justifyContent: 'center' },
+      }}
+      title={alt}
+    >
         <Image
           src={src}
           alt={alt}
@@ -176,7 +179,12 @@ export default function ProjectPage() {
           className={`extra-grid-item ${img.fullWidth ? 'full-width' : ''}`}
           key={index}
         >
-          <ZoomableImage src={img.src || img} alt={section.title || ''} />
+          <ZoomableImage
+          src={img.src || img}
+          alt={img.title || section.title || ''}
+          title={img.title}
+        />
+
         </div>
       ))}
     </div>

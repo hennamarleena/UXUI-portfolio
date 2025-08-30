@@ -395,6 +395,10 @@ h3.mantine-Title-root {
   font-weight: 600;
 }
 
+.mantine-Modal-title {
+  padding: 20px !important;
+}
+
 
 /* PROJECT DETAIL SECTIONS */
 
@@ -699,7 +703,6 @@ h3.mantine-Title-root {
     transform: translateX(0);
   }
 }
-
 
 .extra-grid {
   display: grid;
