@@ -4,7 +4,7 @@ const projects = [
     title: "Art Portfolio Website",
     image: "/img/artportfolio_thumbnail.png",
     description:
-      "A personal art portfolio showcasing collage artwork with a responsive gallery, a category filter, and a contact form. Built with React.js.",
+      "Personal art portfolio showcasing collage artwork with a responsive gallery, a category filter, and a contact form. Built with React.js.",
     techStack: [
       "React",
       "HTML/CSS",
@@ -46,7 +46,7 @@ const projects = [
     title: "Festival Website Concept",
     image: "/img/neonwaves-thumbnail.jpg",
     description:
-      "A conceptual website layout and prototypes for a music and culture festival.",
+      "Figma-based website concept for a fictional electronic music festival. Designed to capture the rave atmosphere and streamline ticket purchases.",
     overview: `
       <p>
         A conceptual website project for a fictional electronic music and culture festival. 
