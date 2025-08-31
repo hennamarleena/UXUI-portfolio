@@ -1,5 +1,15 @@
 # UX/UI & Web Design Portfolio
 
-This portfolio showcases my work in UX/UI and web design. It highlights projects that I have built.
+This portfolio showcases my work in UX/UI and web design.
 
-Technologies used include HTML5, CSS3, React, Mantine component library, Figma, and Netlify.
+## Technologies Used
+- React
+- React Router
+- Mantine UI components
+- HTML5 & CSS
+- Netlify for deployment
+- Figma for layout and design planning
+
+## Features
+- Mobile-friendly hamburger menu
+- Individual project pages with detailed descriptions, images, and links
