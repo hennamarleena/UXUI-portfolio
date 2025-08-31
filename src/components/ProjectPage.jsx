@@ -5,7 +5,7 @@ import projects from './projectsData';
 
 // Zoomattava kuva-komponentti
 function ZoomableImage({ src, alt }) {
-  const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(false); // Modal-tila auki/kiinni
   return (
     <>
       <Image
@@ -16,10 +16,12 @@ function ZoomableImage({ src, alt }) {
         style={{ cursor: 'pointer', width: '100%', height: 'auto' }}
       />
 
+    {/* Modal, jossa kuva zoomattuna */}
       <Modal
       opened={opened}
       onClose={() => setOpened(false)}
       withCloseButton={true}
+      className='zoom-modal'
       size="auto"
       centered
       overflow="inside"
@@ -43,17 +45,20 @@ function ZoomableImage({ src, alt }) {
   );
 }
 
+// Pääsivu yksittäiselle projektille
 export default function ProjectPage() {
-  const { id } = useParams();
-  const project = projects.find((p) => p.id === id);
-  const navigate = useNavigate();
+  const { id } = useParams(); // Haetaan URL:stä projekti-id
+  const project = projects.find((p) => p.id === id); // Etsitään projekti datasta
+  const navigate = useNavigate(); // React Routerin navigointi
 
   if (!project) return <p>Project not found</p>;
 
+  // Back-nappulan funktio, palauttaa pääsivulle ja scrollaa "projects"-osioon
   const handleBack = () => {
     navigate("/", { state: { scrollTo: "projects" } });
   };
 
+  // Scrollaa aina sivun yläosaan kun komponentti renderöidään
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -104,7 +109,7 @@ export default function ProjectPage() {
             rel="noopener noreferrer"
             size="md"
             radius="xl"
-            style={{ backgroundColor: '#3e9ff3ff', color: 'white' }}
+            style={{ backgroundColor: '#3196edff', color: 'white' }}
           >
             {link.label}
           </Button>
