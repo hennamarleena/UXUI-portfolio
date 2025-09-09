@@ -17,7 +17,7 @@ export default function Skills() {
               <li>Javascript</li>
               <li>Adobe Illustrator</li>
               <li>CSS</li>
-              <li>AI-powered workflow</li>
+              <li>AI-enhanced workflow</li>
             </ul>
           </Paper>
         </div>
