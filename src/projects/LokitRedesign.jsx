@@ -1,4 +1,4 @@
-import { List, Title, SimpleGrid, Text } from "@mantine/core";
+import { List, Title, SimpleGrid } from "@mantine/core";
 import { ZoomableImage } from "../components/ZoomableImage";
 
 
@@ -15,8 +15,6 @@ export default function LokitRedesign() {
         My responsibilities covered the full website project lifecycle, from concept and design to implementation and documentation.
       </p>
 
-      {/* Old website screenshots */}
-
       <Title order={4} mb="sm">Analysis of the old website</Title>
 
       <p>
@@ -24,8 +22,18 @@ export default function LokitRedesign() {
         I also reviewed other scout group websites and applied relevant insights to the design process.
       </p>
       <br />
-      <Title order={5}>Key findings:</Title>
+      <Title order={5}>The original home page</Title>
+      
+      <SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }} spacing="1rem" mt="md" mb="xl">
+          <ZoomableImage src={"/img/vanhat-verkkosivut-etusivu.png"} alt={"Landing page of the original website" }></ZoomableImage>
+          <ZoomableImage src={"/img/vanhat-verkkosivut-lokkien-toiminta.png"} alt={"'Toiminta' page of the original website"}></ZoomableImage>
+          <ZoomableImage src={"/img/vanhat-verkkosivut-kokoontumisajat.png"} alt={"'Kokoontumisajat' page of the original website"}></ZoomableImage>
+          <ZoomableImage src={"/img/vanhat-verkkosivut-aikuisena-mukaan.png"} alt={"'Aikuisena mukaan' page of the original website"}></ZoomableImage>
+          {/* <ZoomableImage src={"/img/vanhat-verkkosivut-mukaan-toimintaan.png"} alt={"'Mukaan toimintaan' page of the original website"}></ZoomableImage> */}
+      </SimpleGrid>
+      
 
+      <Title order={5}>Key findings:</Title>
       <List spacing="xs" >
         <List.Item>The brand and visual identity were inconsistent, and there were only few images.</List.Item>
         <List.Item>Accessibility and navigation had usability issues.</List.Item>
@@ -42,33 +50,50 @@ export default function LokitRedesign() {
       <p>
       I defined the website's target groups and their goals on the site, identifying what information each group was looking for.
       </p>
-
-      {/* Image of the user flow diagram before later iterations */}
+      <br />
+      <Title order={5}>User flow and rough content hierarchy before later iterations</Title>
+      <ZoomableImage src={"/img/userflow.png"} alt={"Userflow before iterations"}></ZoomableImage>
 
       <Title order={4}>Site hierarchy and wireframing</Title>
       <p>
         I created a rough site hierarchy outlining the main pages and their subpages. 
         Based on this structure, I developed wireframes to plan the layout and organization of content.
       </p>
-      {/* Images of wireframes and site hierarchy */}
+      <br />
+      <Title order={5}>Examples of the wireframes</Title>
+      <SimpleGrid cols={{ base: 2, sm: 2, lg: 3 }} spacing="1rem" mt="md" mb="xl">
+          <ZoomableImage src={"/img/Etusivu-wireframe.png"} alt={""}></ZoomableImage>
+          <ZoomableImage src={"/img/Ajankohtaista-wireframe.png"} alt={""}></ZoomableImage>
+          <ZoomableImage src={"/img/Toiminta-wireframe.png"} alt={""}></ZoomableImage>
+      </SimpleGrid>
+      <p>I originally planned a sidebar menu showing subpages for each main topic (e.g., "Toiminta" and its subpages). This was changed due to platform limits.</p>
 
       <Title order={4}>Visual design and implementation</Title>
       <p>
       I created a unified layout, typography, and color scheme for the site, using colors, images, and white space carefully while keeping the style and feel of the old website.
-      Challenges: The platform had some limits, so not all design ideas could be used. 
-      I adapted the original wireframe and made changes based on feedback.
+      The platform had some limits, so not all design ideas could be used. 
+      I adapted the original wireframes and made changes based on feedback.
       The site was built on Tilda using ready-made blocks and Zero Block customizations. 
       I used CSS to polish the look and make it consistent.
       </p>
       <br />
+
+      <SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }} spacing="1rem" mt="md" mb="xl">
+          <ZoomableImage src={"/img/lokit-etusivu.png"} alt={"Final website" }></ZoomableImage>
+          <ZoomableImage src={"/img/lokit-ajankohtaista.png"} alt={"Final website" }></ZoomableImage>
+          <ZoomableImage src={"/img/lokit-uudenlokinopas.png"} alt={"Final website" }></ZoomableImage>
+          <ZoomableImage src={"/img/lokit-tue-yrityksena.png"} alt={"Final website" }></ZoomableImage>
+      </SimpleGrid>
+
+      <br />
       <Title order={5}>Key design elements:</Title>
         <List spacing="xs" >
-        <List.Item>Banner images that change in different sections</List.Item>
+        <List.Item>Clear site structure with main sections and subpages</List.Item>
+        <List.Item>Internal links and CTA buttons guiding users to relevant pages.</List.Item>
+        <List.Item>Banner images that change between sections to add visual interest</List.Item>
         <List.Item>Top bar above the menu with quick links</List.Item>
         <List.Item>Call-to-action buttons in the menu</List.Item>
         <List.Item>Balanced text and images to make long content easier to read</List.Item>
-        <List.Item>Originally planned a sidebar menu showing subpages for each main topic (e.g., “Activities” and its subpages). This was changed to a top menu due to platform limits.</List.Item>
-      {/* Image of the original wireframe showing the sidebar navigation idea */}
       </List>
 
       <Title order={4}>Practical solutions and optimization</Title>
