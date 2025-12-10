@@ -3,48 +3,6 @@ import { useEffect, useState } from 'react';
 import { Image, Group, Badge, Button, Title, Container, Paper, Modal } from '@mantine/core';
 import projects from './projectsData';
 
-// Zoomattava kuva-komponentti
-function ZoomableImage({ src, alt }) {
-  const [opened, setOpened] = useState(false); // Modal-tila auki/kiinni
-  return (
-    <>
-      <Image
-        src={src}
-        alt={alt}
-        fit="contain"
-        onClick={() => setOpened(true)}
-        style={{ cursor: 'pointer', width: '100%', height: 'auto' }}
-      />
-
-    {/* Modal, jossa kuva zoomattuna */}
-      <Modal
-      opened={opened}
-      onClose={() => setOpened(false)}
-      withCloseButton={true}
-      className='zoom-modal'
-      size="auto"
-      centered
-      overflow="inside"
-      padding={0}
-      styles={{
-        header: { padding: '5px 10px', borderBottom: '1px solid #ddd' },
-        title: { fontSize: '1.1rem', fontWeight: 500, color: '#333' },
-        modal: { maxWidth: '95vw', maxHeight: '95vh' },
-        body: { padding: 0, display: 'flex', justifyContent: 'center' },
-      }}
-      title={alt}
-    >
-        <Image
-          src={src}
-          alt={alt}
-          fit="contain"
-          style={{ maxHeight: '90vh', width: '100%', height: 'auto' }}
-        />
-      </Modal>
-    </>
-  );
-}
-
 // Pääsivu yksittäiselle projektille
 export default function ProjectPage() {
   const { id } = useParams(); // Haetaan URL:stä projekti-id
@@ -52,6 +10,8 @@ export default function ProjectPage() {
   const navigate = useNavigate(); // React Routerin navigointi
 
   if (!project) return <p>Project not found</p>;
+
+    const ProjectComponent = project.component;
 
   // Back-nappulan funktio, palauttaa pääsivulle ja scrollaa "projects"-osioon
   const handleBack = () => {
@@ -135,7 +95,7 @@ export default function ProjectPage() {
         >
           Technologies
         </Title>
-        <Group spacing="xs" mt="md">
+        <Group spacing="xs" mt="md" mb="xl">
           {project.techStack.map((tech, index) => (
             <Badge key={index} variant="outline" size="lg">
               {tech}
@@ -144,58 +104,10 @@ export default function ProjectPage() {
         </Group>
       </section>
 
-      {/* Overview */}
-      <section className="project-overview" style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>
-        <Title order={3} mb="sm">
-          Overview
-        </Title>
-        <div dangerouslySetInnerHTML={{ __html: project.overview }} />
-      </section>
 
-      {/* Research */}
-      {project.research?.length > 0 && (
-        <section className="project-research" style={{ marginBottom: '1.5rem' }}>
-          <Title order={3} mb="sm">
-            Research
-          </Title>
-          <div dangerouslySetInnerHTML={{ __html: project.research }} />
-        </section>
-      )}
+    <ProjectComponent/>
 
-      {/* Styles */}
-      {project.styles?.length > 0 && (
-        <section className="project-styles" style={{ marginBottom: '1.5rem' }}>
-          <Title order={3} mb="sm">
-            Styles
-          </Title>
-          <div
-            dangerouslySetInnerHTML={{__html: project.styles}}/>
-        </section>
-      )}
-
-      {/* Extra Sections */}
-      {project.extraSections?.map((section, i) => (
-  <section key={i} className="extra-section">
-    {section.title && <Title order={3}>{section.title}</Title>}
-
-    <div className="extra-grid">
-      {section.images.map((img, index) => (
-        <div
-          className={`extra-grid-item ${img.fullWidth ? 'full-width' : ''}`}
-          key={index}
-        >
-          <ZoomableImage
-          src={img.src || img}
-          alt={img.title || section.title || ''}
-          title={img.title}
-        />
-
-        </div>
-      ))}
-    </div>
-  </section>
-))}
-
+    
     </Container>
   );
 }
