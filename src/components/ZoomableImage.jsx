@@ -35,7 +35,7 @@ export function ZoomableImage({ src, alt, imagesize }) {
           src={src}
           alt={alt}
           fit="contain"
-          style={{ maxHeight: "90vh", width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto" }}
         />
       </Modal>
     </>
