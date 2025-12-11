@@ -29,7 +29,6 @@ export default function LokitRedesign() {
           <ZoomableImage src={"/img/vanhat-verkkosivut-lokkien-toiminta.png"} alt={"'Toiminta' page of the original website"}></ZoomableImage>
           <ZoomableImage src={"/img/vanhat-verkkosivut-kokoontumisajat.png"} alt={"'Kokoontumisajat' page of the original website"}></ZoomableImage>
           <ZoomableImage src={"/img/vanhat-verkkosivut-aikuisena-mukaan.png"} alt={"'Aikuisena mukaan' page of the original website"}></ZoomableImage>
-          {/* <ZoomableImage src={"/img/vanhat-verkkosivut-mukaan-toimintaan.png"} alt={"'Mukaan toimintaan' page of the original website"}></ZoomableImage> */}
       </SimpleGrid>
       
 
@@ -80,9 +79,9 @@ export default function LokitRedesign() {
 
       <SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }} spacing="1rem" mt="md" mb="xl">
           <ZoomableImage src={"/img/lokit-etusivu.png"} alt={"Final website" }></ZoomableImage>
-          <ZoomableImage src={"/img/lokit-ajankohtaista.png"} alt={"Final website" }></ZoomableImage>
           <ZoomableImage src={"/img/lokit-uudenlokinopas.png"} alt={"Final website" }></ZoomableImage>
-          <ZoomableImage src={"/img/lokit-tue-yrityksena.png"} alt={"Final website" }></ZoomableImage>
+          <ZoomableImage src={"/img/lokit-ajankohtaista.png"} alt={"Final website" }></ZoomableImage>
+          <ZoomableImage src={"/img/lokit-tuki.png"} alt={"Final website" }></ZoomableImage>
       </SimpleGrid>
 
       <br />
