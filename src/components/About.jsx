@@ -30,9 +30,11 @@ export default function About() {
             <div className="about-text">
                 <h2>HELLO I AM HENNA</h2>
                 <p>
-                  I'm a junior UI/UX designer with roots in graphic design, filmmaking and web development. 
-                  My journey began with a love for visual storytelling. Over time I became fascinated by how design and technology come together. 
-                  I enjoy exploring how to create user-centered digital experiences that combine functionality with aesthetics.
+                  I'm a soon-to-be graduate IT student interested in UI/UX design, digital product development and web experiences.                   
+                  <br />
+                  My journey began with a love for visual storytelling, with roots in graphic design and filmmaking.
+                  Over time I became fascinated by how design and technology come together.
+                  I aim to create user-centered digital experiences that combine functionality with aesthetics.
                 </p>
             </div>
         </section>
