@@ -22,15 +22,8 @@ export default function LokitRedesign() {
         I also reviewed other scout group websites and applied relevant insights to the design process.
       </p>
       <br />
-      <Title order={5}>The original home page</Title>
-      
-      <SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }} spacing="1rem" mt="md" mb="xl">
-          <ZoomableImage src={"/img/vanhat-verkkosivut-etusivu.png"} alt={"Landing page of the original website" }></ZoomableImage>
-          <ZoomableImage src={"/img/vanhat-verkkosivut-lokkien-toiminta.png"} alt={"'Toiminta' page of the original website"}></ZoomableImage>
-          <ZoomableImage src={"/img/vanhat-verkkosivut-kokoontumisajat.png"} alt={"'Kokoontumisajat' page of the original website"}></ZoomableImage>
-          <ZoomableImage src={"/img/vanhat-verkkosivut-aikuisena-mukaan.png"} alt={"'Aikuisena mukaan' page of the original website"}></ZoomableImage>
-      </SimpleGrid>
-      
+      <Title order={5}>The original website</Title>
+      <ZoomableImage src={"/img/lokit-original.png"} alt={"Original website" }></ZoomableImage>
 
       <Title order={5}>Key findings:</Title>
       <List spacing="xs" >
@@ -60,11 +53,7 @@ export default function LokitRedesign() {
       </p>
       <br />
       <Title order={5}>Examples of the wireframes</Title>
-      <SimpleGrid cols={{ base: 2, sm: 2, lg: 3 }} spacing="1rem" mt="md" mb="xl">
-          <ZoomableImage src={"/img/Etusivu-wireframe.png"} alt={""}></ZoomableImage>
-          <ZoomableImage src={"/img/Ajankohtaista-wireframe.png"} alt={""}></ZoomableImage>
-          <ZoomableImage src={"/img/Toiminta-wireframe.png"} alt={""}></ZoomableImage>
-      </SimpleGrid>
+        <ZoomableImage src={"/img/lokit-wireframes.png"} alt={"Examples of the wireframes"}></ZoomableImage>
       <p>I originally planned a sidebar menu showing subpages for each main topic (e.g., "Toiminta" and its subpages). This was changed due to platform limits.</p>
 
       <Title order={4}>Visual design and implementation</Title>
@@ -75,16 +64,9 @@ export default function LokitRedesign() {
       The site was built on Tilda using ready-made blocks and Zero Block customizations. 
       I used CSS to polish the look and make it consistent.
       </p>
-      <br />
-
-      <SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }} spacing="1rem" mt="md" mb="xl">
-          <ZoomableImage src={"/img/lokit-etusivu.png"} alt={"Final website" }></ZoomableImage>
-          <ZoomableImage src={"/img/lokit-uudenlokinopas.png"} alt={"Final website" }></ZoomableImage>
-          <ZoomableImage src={"/img/lokit-ajankohtaista.png"} alt={"Final website" }></ZoomableImage>
-          <ZoomableImage src={"/img/lokit-tuki.png"} alt={"Final website" }></ZoomableImage>
-      </SimpleGrid>
-
-      <br />
+      <ZoomableImage src={"/img/lokit-final.png"} alt={"Final website" }></ZoomableImage>
+      <ZoomableImage src={"/img/lokit-final-2.png"} alt={"Final website" }></ZoomableImage>
+      
       <Title order={5}>Key design elements:</Title>
         <List spacing="xs" >
         <List.Item>Clear site structure with main sections and subpages</List.Item>
