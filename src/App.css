@@ -220,7 +220,7 @@ nav ul li button:hover {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .skills-paper {
@@ -236,7 +236,7 @@ nav ul li button:hover {
 }
 
 .skills-paper li {
-  text-align: center;
+  text-align: left;
   list-style: none;
   padding-bottom: 4px;
 }
@@ -512,7 +512,7 @@ h3.mantine-Title-root {
   }
   #skills {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     flex-wrap: wrap;
     padding: 20px;
   }
