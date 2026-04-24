@@ -15,9 +15,10 @@ export default function Skills() {
               <li>Figma</li>
               <li>React</li>
               <li>Javascript</li>
-              <li>Adobe Illustrator</li>
-              <li>CSS</li>
+              <li>HTML/CSS</li>
               <li>AI-enhanced workflow</li>
+              <li>Adobe Illustrator</li>
+              <li>Wordpress & Woocommerce</li>
             </ul>
           </Paper>
         </div>
