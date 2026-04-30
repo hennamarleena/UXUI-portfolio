@@ -1,42 +1,23 @@
-// import { Paper } from '@mantine/core';
+import { Paper, Badge, SimpleGrid} from '@mantine/core';
 
-// export default function Skills() {
-//   return (
-//     <section id="skills" aria-labelledby="skills-title">
-//       <div className="skills-title">
-//         <h2>Skills</h2>
-//       </div>
-
-//       <div className="skills-content">
-//         <div className="skills-paper">
-//           <Paper shadow="" radius="0" p="xl" style={{ backgroundColor: '#fff', height: '100%' }}>
-//             {/* <h3>Technical skills</h3> */}
-//             <ul className='skills-list'>
-//               <li>Figma</li>
-//               <li>React</li>
-//               <li>Javascript</li>
-//               <li>HTML/CSS</li>
-//               <li>AI-enhanced workflow</li>
-//               <li>Adobe Illustrator</li>
-//               <li>Wordpress & Woocommerce</li>
-//             </ul>
-//           </Paper>
-//         </div>
-// {/* 
-//         <div className="skills-paper">
-//           <Paper shadow="md" radius="0" p="xl" style={{ backgroundColor: '#fff', height: '100%' }}>
-//             <h3>Core Strengths</h3>
-//             <ul>
-//               
-//             </ul>
-//           </Paper>
-//         </div> */}
-//       </div>
-//     </section>
-//   );
-// }
-
-import { Paper } from '@mantine/core';
+const skillGroups = [
+  {
+    title: 'Development',
+    skills: ['React', 'JavaScript', 'HTML5 & CSS', 'PHP fundamentals', 'WordPress'],
+  },
+  {
+    title: 'Design',
+    skills: ['Figma', 'UX/UI design', 'Graphic design'],
+  },
+  {
+    title: 'Tools',
+    skills: ['Git', 'WooCommerce', 'Adobe Illustrator', 'Adobe Photoshop'],
+  },
+  {
+    title: 'Workflow',
+    skills: ['AI-assisted development', 'Digital accessibility'],
+  },
+];
 
 export default function Skills() {
   return (
@@ -46,24 +27,42 @@ export default function Skills() {
       </div>
 
       <div className="skills-content">
-        <Paper radius="0" p="xl" style={{ backgroundColor: '#fff' }}>
-          <ul className="skills-list" style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '4px 40px',
-          }}>
-            <li>Figma</li>
-            <li>React</li>
-            <li>Javascript</li>
-            <li>HTML/CSS</li>
-            <li>Adobe Illustrator</li>
-            <li>WordPress & WooCommerce</li>
-            <li>Git</li>
-            <li>AI-assisted development</li>
-            <li>Layout & visual design</li>
-            <li>Attention to detail</li>
-          </ul>
-        </Paper>
+      <SimpleGrid
+        cols={{ xs: 1, sm: 2, md: 2, lg: 2}}
+        spacing="xs"
+      >
+          {skillGroups.map((group) => (
+            <Paper
+            key={group.title}
+            radius="md"
+            p="lg"
+            style={{
+              backgroundColor: '#fff',
+              border: '0px solid #eee',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+              <h3 style={{
+                fontSize: '12px',
+                fontWeight: 600,
+                letterSpacing: '0.2ch',
+                textTransform: 'uppercase',
+                marginBottom: '6px',
+              }}>
+                {group.title}
+              </h3>
+              <ul style={{ padding: 0, margin: 0, listStyle: '', listStylePosition: 'inside' }}>
+          {group.skills.map((skill) => (
+            <li key={skill} style={{ paddingBottom: '8px' }}>
+              {skill}
+            </li>
+          ))}
+        </ul>
+            </Paper>
+          ))}
+        </SimpleGrid>
       </div>
     </section>
   );
