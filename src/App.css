@@ -210,9 +210,6 @@ nav ul li button:hover {
 
 #skills .skills-content {
   flex: 1;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 30px;
   width: 100%;
 }
 
@@ -244,7 +241,6 @@ nav ul li button:hover {
 .skills-paper h3 {
   font-size: 1.3rem;
 }
-
 
 /* PROJECTS SECTION */
 
@@ -491,10 +487,6 @@ h3.mantine-Title-root {
   #contact div > img {
     max-height: 70vh;
   }
-  .about-text {
-    padding-left: 0;
-    padding-right: 1.4em;
-  }
   .about-text p {
     font-size: 1.1em ;
   }
@@ -507,9 +499,6 @@ h3.mantine-Title-root {
   .about-text p {
     font-size: 1.2em;
 }
-  .about-text {
-    padding-left: 1.5em;
-  }
   #skills {
     flex-direction: column;
     text-align: left;
@@ -547,26 +536,26 @@ h3.mantine-Title-root {
     #about h2 {
     font-size: 2.6rem;
   }
+    #skills .skills-content {
+    width: 70%;
+    margin: 0 auto;
+  }
 
 }
 
 
 @media (max-width: 1440px) {
-  .about-text {
-      padding-left: 1em;
-    }
+    .about-text {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: left;
+  }
 }
 
 @media (max-width: 1600px) {
   .contact-text {
     padding-left: 8em;
     padding-right: 8em;
-  }
-}
-
-@media (max-width: 1700px) {
-  .about-text {
-    padding-left: 0em;
   }
 }
 
@@ -583,8 +572,6 @@ h3.mantine-Title-root {
   }
   .about-text {
     padding-top: 3em;
-    padding-left: 2em;
-    padding-right: 2em;
     padding-bottom: 3em;
     text-align: center;
   }
@@ -655,7 +642,7 @@ h3.mantine-Title-root {
   }
   #skills .skills-content {
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding-bottom: 3em;
   }
@@ -708,4 +695,3 @@ h3.mantine-Title-root {
     transform: translateX(0);
   }
 }
-
