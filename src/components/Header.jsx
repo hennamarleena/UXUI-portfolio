@@ -37,6 +37,18 @@ export default function Header() {
     return () => { document.body.style.overflow = "auto"; }; // puhdistetaan vaikutus komponentin purkautuessa
   }, [isOpen]);
 
+
+  useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 885) {
+      setIsOpen(false);
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
   return (
     <header id="header">
       <h1>

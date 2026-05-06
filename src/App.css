@@ -455,6 +455,37 @@ h3.mantine-Title-root {
 
 /* RESPONSIVE DESIGN */
 
+@media (min-width: 886px) {
+  nav,
+  nav.open {
+    display: flex !important;
+    transform: none !important;
+    position: static !important;
+    height: auto !important;
+    flex-direction: row !important;
+  }
+
+  .overlay,
+  .overlay.open {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
+
+@media (min-width: 886px) {
+  nav {
+    display: flex !important;
+    transform: none !important;
+    position: static;
+    height: auto;
+    flex-direction: row;
+  }
+}
 
 @media (max-width: 1160px) {
   .about-text p {
