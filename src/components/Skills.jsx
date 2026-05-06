@@ -35,7 +35,7 @@ export default function Skills() {
             <Paper
             key={group.title}
             radius="md"
-            p="lg"
+            pb="lg"
             style={{
               backgroundColor: '#fff',
               border: '0px solid #eee',
