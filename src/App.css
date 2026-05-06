@@ -41,13 +41,21 @@ img {
 
 #about h2,
 #skills h2,
-#projects h2,
-#contact h2 {
+#projects h2 {
   font-weight: 500;
   color: var(--text-color);
   letter-spacing: 0.2ch;
   text-transform: uppercase;
   font-size: 3em;
+}
+
+#contact h2 {
+  font-weight: 600;
+  color: var(--text-color);
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding-bottom: 1em;
 }
 
 
@@ -58,7 +66,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em 100px;
   position: relative; 
   z-index: 30;
 }
@@ -151,6 +159,12 @@ nav ul li button:hover {
   justify-content: space-between;
   
 }
+
+.about-img-container {
+  display: flex;
+  flex: 1;
+}
+
 #about img {
   max-height: 70vh;
 }
@@ -178,7 +192,7 @@ nav ul li button:hover {
   background-color: var(--background-color-white);
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 80px;
+  padding: 60px 100px;
 }
 
 #skills h2:after {
@@ -213,40 +227,12 @@ nav ul li button:hover {
   width: 100%;
 }
 
-#skills .skills-paper {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.skills-paper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills-paper > .mantine-Paper-root {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills-paper li {
-  text-align: left;
-  list-style: none;
-  padding-bottom: 4px;
-}
-
-.skills-paper h3 {
-  font-size: 1.3rem;
-}
 
 /* PROJECTS SECTION */
 
 #projects {
   min-height: 70vh;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   background-size: cover;
   background-image: url("/img/bg-projects.png");
   width: auto;
@@ -255,7 +241,7 @@ nav ul li button:hover {
 }
 
 #projects h2 {
-  padding: 50px 0 60px;
+  padding: 60px 0 60px;
   text-align: center;
 }
 
@@ -286,19 +272,14 @@ nav ul li button:hover {
 #contact {
   background-color: var(--background-color-white);
   display: flex;
-}
-
-#contact h2 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0.5em 0;
 }
 
-#contact h3 {
-  font-weight: 500;
-  color: var(--text-color);
-}
-
-.contact-text {
+.contact-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -308,33 +289,45 @@ nav ul li button:hover {
   text-align: center;
 }
 
-.contact-text p {
-  font-size: 1.3em;
-  padding-bottom: 0.5em;
+.contact-container .title-container {
+  display: flex;
+  flex: 1;
 }
 
-#contact img {
-  max-height: 50vh;
+.details-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.contact-container p {
+  font-size: 1.3em;
+  padding-bottom: 0.5em;
+  text-align: center;
 }
 
 .contact-icons-flex {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   padding-top: 0.5em;
   gap: 1em;
 }
 
+.contact-container h2 {
+  text-align: center;
+  padding-bottom: 60px;
+}
 
 /* FOOTER */
 #footer {
-  min-height: 5vh;
-  background-color: var(--background-color-darker);
-  text-align: right;
-  padding: 2vh 5vh 1vh;
+  text-align: center;
+  padding: 3vh 1vh;
   color: var(--text-color);
 }
-
 
 /* KOMPONENTIT */
 
@@ -356,7 +349,7 @@ nav ul li button:hover {
 }
 
 .icon {
-  height: 50px;
+  height: 40px;
 }
 
 .extra-grid {
@@ -416,8 +409,6 @@ h3.mantine-Title-root {
 
 .mantine-Button-root .m_77c9d27d {
   font-weight: 400 !important;
-}
-.mantine-Button-root .m_77c9d27d {
   background-color: #33ADC1 !important;
 }
 
@@ -464,6 +455,13 @@ h3.mantine-Title-root {
 
 /* RESPONSIVE DESIGN */
 
+
+@media (max-width: 1160px) {
+  .about-text p {
+    font-size: 1em;
+  }
+}
+
 @media (max-width: 590px) {
   .contact-text {
     padding-left: 0;
@@ -474,31 +472,25 @@ h3.mantine-Title-root {
 }
 
 @media (max-width: 950px) {
-  #contact {
-    display: block;
-  }
   .contact-text {
     padding-bottom: 3em;
     padding-top: 1.5em;
   }
-  footer {
-    text-align: center;
-  }
-  #contact div > img {
-    max-height: 70vh;
-  }
-  .about-text p {
-    font-size: 1.1em ;
-  }
 }
 
 @media (max-width: 1200px) {
+    #about h2 {
+    font-size: 2.6rem;
+  }
+    #skills .skills-content {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .about-text {
     padding-bottom: 0;
   }
-  .about-text p {
-    font-size: 1.2em;
-}
+
   #skills {
     flex-direction: column;
     text-align: left;
@@ -511,8 +503,7 @@ h3.mantine-Title-root {
     justify-content: center;
   }
   #skills h2,
-  #projects h2,
-  #contact h2 {
+  #projects h2 {
     font-size: 2em;
   }
   .icon {
@@ -529,26 +520,6 @@ h3.mantine-Title-root {
 @media (max-width: 1300px) {
     #about h2 {
     font-size: 3.5rem;
-  }
-}
-
-@media (max-width: 1200px) {
-    #about h2 {
-    font-size: 2.6rem;
-  }
-    #skills .skills-content {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-}
-
-
-@media (max-width: 1440px) {
-    .about-text {
-    padding-top: 3em;
-    padding-bottom: 3em;
-    text-align: left;
   }
 }
 
@@ -597,7 +568,6 @@ h3.mantine-Title-root {
     font-size: 1em;
     display: none;
     width: 100%;
-    position: absolute;
     left: 0;
     position: fixed;
     top: 0;
@@ -609,20 +579,40 @@ h3.mantine-Title-root {
   }
 
   nav ul {
+    margin: 0;
+    display: flex;
     flex-direction: column;
-    padding-top: 10px;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100%;
+    padding: 0;
+    list-style: none;
   }
+
   nav ul li button {
     background-color: var(--primary-blue);
     border-radius: 20px;
+    display: block;
+    background-color: var(--primary-blue);
+    color: var(--background-color-white);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.3s;
   }
+    nav ul li button:hover {
+    background-color: #33ADC1;
+  }
+    nav.open {
+    transform: translateX(0);
+  }
+
   #about h2 {
     font-size: 2.2em;
   }
   .contact-text {
-    padding: 2em;
-    text-align: center;
     padding: 1em;
     text-align: center;
   }
@@ -631,15 +621,12 @@ h3.mantine-Title-root {
     padding-bottom: 5em;
   }
   #skills h2,
-  #projects h2,
-  #contact h2 {
+  #projects h2 {
     font-size: 2em;
     text-align: center;
     padding-bottom: 1.5em;
   }
-  #contact h2 {
-    padding-bottom: 0.3em;
-  }
+
   #skills .skills-content {
     flex-direction: column;
     width: 70%;
@@ -664,34 +651,21 @@ h3.mantine-Title-root {
     display: flex;
   }
 
-  nav ul {
-    padding: 1em 0;
-    margin: 0;
-    display: flex;
+  .contact-container {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2em;
-    height: 100%;
-    padding: 0;
-    list-style: none;
+    justify-content: center;
   }
 
-  nav ul li button {
-    display: block;
-    background-color: var(--primary-blue);
-    color: var(--background-color-white);
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1.2em;
+  .details-container{
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    transition: background-color 0.3s;
-  }
-
-  nav ul li button:hover {
-    background-color: #33ADC1;
-  }
-    nav.open {
-    transform: translateX(0);
   }
 }
+@media (max-width: 1050px) {
+  #about h2 {
+    font-size: 2rem;
+  }
+}
+
