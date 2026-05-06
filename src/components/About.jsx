@@ -17,6 +17,7 @@ export default function About() {
 
     return (
       <section id="about" aria-labelledby="about-title">
+        <div className="about-img-container">
             <img
             src={isSmallScreen ? "/img/about-img-sm.png" : "/img/about-img-lg.png"}
             alt="decorative image"
@@ -27,6 +28,7 @@ export default function About() {
               height: "auto"
             }}
             />
+        </div>
             <div className="about-text">
                 <h2>HELLO I AM HENNA</h2>
                 <p>
