@@ -41,7 +41,8 @@ img {
 
 #about h2,
 #skills h2,
-#projects h2 {
+#projects h2,
+#education h2 {
   font-weight: 500;
   color: var(--text-color);
   letter-spacing: 0.2ch;
@@ -192,7 +193,8 @@ nav ul li button:hover {
   background-color: var(--background-color-white);
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 100px;
+  padding: 70px 100px;
+  padding-bottom: 40px;
 }
 
 #skills h2:after {
@@ -268,9 +270,37 @@ nav ul li button:hover {
 }
 
 
+/* BACKGROUND */
+#education {
+  background-color: var(--background-color-white);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 70px 100px;
+  
+}
+
+#education h2:after {
+  content: "";
+  border: 7px solid var(--primary-blue);
+  display: inline-block;
+  width: 1em;
+  position: relative;
+  left: -7.35em;
+  bottom: -30px;
+}
+
+.education-title {
+  display: flex;
+  flex: 1;
+}
+.education-content {
+  display: flex;
+  flex: 1;
+}
+
 /* CONTACT */
 #contact {
-  background-color: var(--background-color-white);
+  background-color: var(--background-color-darker);
   display: flex;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -325,8 +355,9 @@ nav ul li button:hover {
 /* FOOTER */
 #footer {
   text-align: center;
-  padding: 3vh 1vh;
   color: var(--text-color);
+  background-color: var(--background-color-darker);
+  font-size: 0.9em;
 }
 
 /* KOMPONENTIT */
@@ -514,7 +545,10 @@ h3.mantine-Title-root {
     font-size: 2.6rem;
   }
     #skills .skills-content {
-    width: 70%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -545,6 +579,23 @@ h3.mantine-Title-root {
   }
   #skills h2 {
     padding: 50px 0 60px;
+  }
+    #education {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #education .education-title {
+    justify-content: center;
+  }
+  #education h2 {
+    font-size: 2em;
+    padding: 50px 0 60px;
+    text-align: center;
+  }
+  #education .education-content {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 3em;
   }
 }
 
@@ -660,6 +711,9 @@ h3.mantine-Title-root {
 
   #skills .skills-content {
     flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     width: 70%;
     margin: 0 auto;
     padding-bottom: 3em;
@@ -693,10 +747,23 @@ h3.mantine-Title-root {
     justify-content: center;
     text-align: center;
   }
+
+    #education h2 {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1.5em;
+  }
+  #education .education-content {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 3em;
+  }
+
+  
+
 }
 @media (max-width: 1050px) {
   #about h2 {
     font-size: 2rem;
   }
 }
-

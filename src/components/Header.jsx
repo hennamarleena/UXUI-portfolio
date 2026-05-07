@@ -78,6 +78,9 @@ export default function Header() {
             <button onClick={() => scrollToSection("projects")}>Projects</button>
           </li>
           <li>
+            <button onClick={() => scrollToSection("education")}>Education</button>
+          </li>
+          <li>
             <button onClick={() => scrollToSection("contact")}>Contact</button>
           </li>
         </ul>

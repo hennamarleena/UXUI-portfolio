@@ -2,6 +2,7 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Education from './Education';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -21,6 +22,7 @@ export default function MainContent() {
       <About />
       <Skills />
       <Projects />
+      <Education/>
       <Contact />
     </>
   );
