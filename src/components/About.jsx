@@ -32,10 +32,10 @@ export default function About() {
             <div className="about-text">
                 <h2>HELLO I AM HENNA</h2>
                 <p>
-                  I am a recently graduated developer with a strong interest in UI/UX design and digital product development.
-                  I aim to combine functionality with aesthetics.
-                  My background in graphic design and filmmaking has shaped my approach to visual storytelling. 
+                  I'm a recently graduated developer with a strong interest in UI/UX design and digital product development.
+                  I aim to create interfaces that combine usability and visual thinking.
                 </p>
+                <p>Currently looking for opportunities in UI/UX design, frontend development, or roles that combine both.</p>
             </div>
         </section>
     );
