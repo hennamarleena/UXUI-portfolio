@@ -11,7 +11,7 @@ export default function ProjectCard({ projectData }) {
   return (
     <Card shadow="md" radius="lg" style={{ width: '500px', maxWidth: '100%', display: 'flex', flexDirection: 'column' }}>
       <Card.Section>
-        <Image src={projectData.image} alt={projectData.title} height={250} style={{ objectFit: 'cover', padding: '0px', borderRadius: '0px' }} />
+        <Image src={projectData.image} alt={projectData.title} height={250} style={{ objectFit: 'cover', padding: '0px', paddingBottom: '10px', borderRadius: '0px' }} />
       </Card.Section>
 
       <Card.Section style={{ padding: '20px', flexGrow: 1 }}>
