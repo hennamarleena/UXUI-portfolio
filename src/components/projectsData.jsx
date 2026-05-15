@@ -13,8 +13,9 @@ const projects = [
       { label: "View website", url: "https://tampereenlokit.fi/" },
     ],
     techStack: ["Figma", "CSS", "Tilda.cc"],
-    description: "A complete redesign of the Tampereen Lokit scouts group website, covering user flows, content structure, visual identity, and the final implementation on Tilda.cc."
-
+    type: "Web design",
+    
+    description: "Full website redesign covering user flows, content structure, visual identity, and the final implementation."
   },
 
   {
@@ -28,7 +29,7 @@ const projects = [
     ],
     techStack: ["React",
       "HTML/CSS", "Illustrator", "Zustand", "Material UI", "Web3Forms", "Yet Another React Lightbox", "Netlify"],
-    description: "Personal art portfolio showcasing collage artwork with a responsive gallery, a category filter, and a contact form. Built with React.js."
+    description: "A minimalist React portfolio for collage art. Includes category filtering, responsive gallery, and a contact form."
 
   },
 
@@ -42,8 +43,8 @@ const projects = [
       { label: "View demo website", url: "https://notetaker2-demo.netlify.app/" },
       { label: "GitHub", url: "https://github.com/hennamarleena/Notetaker-2.0" }
     ],
-    techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify", "ChatGPT"],
-    description: "A React-based lecture note management app that allows users to save and retrieve courses and notes."
+    techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
+    description: "A note management app built with React. Redesigned with improved UI, sidebar navigation, and a harmonized color scheme."
   },
 
   
