@@ -7,7 +7,7 @@ const projects = [
   {
     id: "lokit-redesign",
     title: "Website Redesign for Tampereen Lokit Ry",
-    image: "/img/lokit_thumbnail.png",
+    image: "/img/lokit_thumbnail.jpg",
     component: LokitRedesign,
     links: [
       { label: "View website", url: "https://tampereenlokit.fi/" },
