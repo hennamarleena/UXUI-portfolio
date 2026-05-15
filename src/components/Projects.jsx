@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <section id="projects" aria-labelledby="projects-title">
       <h2>Projects</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px'}}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px'}}>
         {projects.slice(0, visible).map((project) => (
           <ProjectCard
             key={project.id}
