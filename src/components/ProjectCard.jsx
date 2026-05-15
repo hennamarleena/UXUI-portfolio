@@ -21,7 +21,7 @@ export default function ProjectCard({ projectData }) {
 
       <Card.Section style={{ padding: '10px 20px 35px', textAlign: 'center' }}>
         <Button variant="filled" radius={25} color="#39C0D6" size="md" onClick={handleView}>
-          Read more
+          Explore
         </Button>
       </Card.Section>
     </Card>
