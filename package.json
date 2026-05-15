@@ -13,6 +13,8 @@
     "@mantine/carousel": "^9.2.1",
     "@mantine/core": "^9.2.1",
     "@mantine/hooks": "^9.2.1",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.8.2",
