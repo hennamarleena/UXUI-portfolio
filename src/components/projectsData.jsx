@@ -17,8 +17,19 @@ const projects = [
     
     description: "Full website redesign covering user flows, content structure, visual identity, and the final implementation."
   },
-
   {
+    id: "Notetaker",
+    title: "NoteTaker 2.0",
+    image: "/img/notetaker_thumbnail.png",
+    component: Notetaker,
+    links: [
+      { label: "View demo website", url: "https://notetaker2-demo.netlify.app/" },
+      { label: "GitHub", url: "https://github.com/hennamarleena/Notetaker-2.0" }
+    ],
+    techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
+    description: "A note management app built with React. Redesigned with improved UI, sidebar navigation, and a harmonized color scheme."
+  },
+    {
     id: "art-portfolio",
     title: "Art Portfolio Website",
     image: "/img/artportfolio_thumbnail.png",
@@ -32,22 +43,6 @@ const projects = [
     description: "A minimalist React portfolio for collage art. Includes category filtering, responsive gallery, and a contact form."
 
   },
-
-
-  {
-    id: "Notetaker",
-    title: "NoteTaker 2.0",
-    image: "/img/notetaker_thumbnail.png",
-    component: Notetaker,
-    links: [
-      { label: "View demo website", url: "https://notetaker2-demo.netlify.app/" },
-      { label: "GitHub", url: "https://github.com/hennamarleena/Notetaker-2.0" }
-    ],
-    techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
-    description: "A note management app built with React. Redesigned with improved UI, sidebar navigation, and a harmonized color scheme."
-  },
-
-  
   {
     id: "Festivalwebsite",
     title: "Festival Website Concept",
