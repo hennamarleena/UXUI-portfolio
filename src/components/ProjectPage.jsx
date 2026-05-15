@@ -69,7 +69,7 @@ export default function ProjectPage() {
             rel="noopener noreferrer"
             size="md"
             radius="xl"
-            style={{ backgroundColor: '#3196edff', color: 'white' }}
+            style={{ backgroundColor: '#39C0D6', color: 'white' }}
           >
             {link.label}
           </Button>
