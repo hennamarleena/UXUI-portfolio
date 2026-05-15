@@ -9,12 +9,20 @@ export default function ProjectCard({ projectData }) {
   };
 
   return (
-    <Card shadow="md" radius="lg" style={{ width: '500px', maxWidth: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Card 
+    radius="lg" 
+    style={{ 
+      width: '100%',
+      height: '100%',
+      display: 'flex', 
+      flexDirection: 'column' 
+      }}
+    >
       <Card.Section>
-        <Image src={projectData.image} alt={projectData.title} height={250} style={{ objectFit: 'cover', padding: '0px', paddingBottom: '10px', borderRadius: '0px' }} />
+        <Image src={projectData.image} alt={projectData.title} onClick={handleView} height={250} style={{ objectFit: 'cover', padding: '0px', paddingBottom: '10px', borderRadius: '0px', cursor:'pointer' }} />
       </Card.Section>
 
-      <Card.Section style={{ padding: '20px', flexGrow: 1 }}>
+      <Card.Section style={{ padding: '20px', flexGrow: 1, textAlign: 'left'  }}>
         <h3>{projectData.title}</h3>
         <p>{projectData.description}</p>
       </Card.Section>

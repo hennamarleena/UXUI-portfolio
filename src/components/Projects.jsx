@@ -3,43 +3,40 @@ import projects from './projectsData';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 
 export default function Projects() {
-
-  const navigate = useNavigate();
-  const [visible, setVisible] = useState(3);
-
-  const handleViewProject = (id) => {
-    navigate(`/project/${id}`);
-  };
 
   return (
     <section id="projects" aria-labelledby="projects-title">
       <h2>Projects</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px'}}>
-        {projects.slice(0, visible).map((project) => (
-          <ProjectCard
-            key={project.id}
-            projectData={project}
-            onView={() => handleViewProject(project.id)}
-          />
-        ))}
-      </div>
 
-      {visible < projects.length && (
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-          <Button
-            variant="transparent"
-            radius={25}
-            color="#444"
-            size="md"
-            shadow="md"
-            onClick={() => setVisible((prev) => prev + 3)}
-          >
-            Show more projects →
-          </Button>
-        </div>
-      )}
+    <Carousel
+      withIndicators
+      align="start"
+      slideSize={{ base: '100%', sm: '100%', md: '33%', lg: '33.339%' }}
+      slideGap="xl"
+      controlSize={35}
+      emblaOptions={{ loop: true, align: 'start' }}
+      styles={{
+        root: { maxWidth: '90%', 
+                margin: '0 auto', 
+                padding: '0 80px 50px' },
+        control: { backgroundColor: '#39C0D6',
+                   color: '#fff', 
+                   border: 'none' },
+        indicator: { backgroundColor: '#39C0D6' },
+      }}
+    >
+        {projects.map((project) => (
+          <Carousel.Slide key={project.id}>
+            <ProjectCard projectData={project} />
+          </Carousel.Slide>
+        ))}
+
+      </Carousel>
+
+
     </section>
   );
 }
