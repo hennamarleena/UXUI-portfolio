@@ -1,21 +1,38 @@
-import { Paper, Badge, SimpleGrid} from '@mantine/core';
+import { SimpleGrid } from '@mantine/core';
 
 const skillGroups = [
   {
-    title: 'Development',
-    skills: ['React', 'JavaScript', 'HTML5 & CSS', 'PHP fundamentals', 'WordPress'],
+    title: 'Frontend Development',
+    skills: [
+      'React',
+      'Javascript', 
+      'HTML5',
+      'CSS',
+    ],
   },
   {
     title: 'Design',
-    skills: ['Figma', 'UX/UI design', 'Graphic design'],
+    skills: [
+      'Figma', 
+      'UX/UI design',
+      'Graphic design', 
+      'Adobe Illustrator',
+    ],
   },
   {
-    title: 'Tools',
-    skills: ['Git', 'WooCommerce', 'Adobe Illustrator', 'Adobe Photoshop'],
+    title: 'CMS & E-commerce',
+    skills: [
+      'WordPress',
+      'WooCommerce',
+      'PHP fundamentals']
   },
   {
-    title: 'Workflow',
-    skills: ['AI-assisted development', 'Digital accessibility'],
+    title: 'Tools & Workflow',
+    skills: [
+      'Git', 
+      'Accessibility',
+      'AI-assisted workflow',
+    ]
   },
 ];
 
@@ -27,40 +44,18 @@ export default function Skills() {
       </div>
 
       <div className="skills-content">
-      <SimpleGrid
-        cols={{ xs: 1, sm: 2, md: 2, lg: 2}}
-        spacing="xs"
-      >
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
           {skillGroups.map((group) => (
-            <Paper
-            key={group.title}
-            radius="md"
-            pb="lg"
-            style={{
-              backgroundColor: '#fff',
-              border: '0px solid #eee',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-              <h3 style={{
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.2ch',
-                textTransform: 'uppercase',
-                marginBottom: '6px',
-              }}>
-                {group.title}
-              </h3>
-              <ul style={{ padding: 0, margin: 0, listStyle: '', listStylePosition: 'inside' }}>
-          {group.skills.map((skill) => (
-            <li key={skill} style={{ paddingBottom: '8px' }}>
-              {skill}
-            </li>
-          ))}
-        </ul>
-            </Paper>
+            <div key={group.title} className="skill-card">
+              <h3 className="skill-card-title">{group.title}</h3>
+              <ul className="skill-list">
+                {group.skills.map((skill) => (
+                  <li key={skill} className="skill-item">
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </SimpleGrid>
       </div>
