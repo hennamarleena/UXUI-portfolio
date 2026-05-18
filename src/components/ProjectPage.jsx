@@ -24,33 +24,36 @@ export default function ProjectPage() {
   }, []);
 
   return (
-    <Container size="xl" px="md" py="xl">
+    <Container size="xl" px="md" py="xl" id="projectPage">
       {/* Back button */}
-      <Button
-        variant="light"
-        onClick={handleBack}
-        style={{
-          border: '1px solid #228BE6',
-          marginBottom: '20px',
-          color: '#228BE6',
-          backgroundColor: 'transparent',
-          fontWeight: 500,
-          fontSize: '1rem',
-          padding: '0.5em 1em',
-        }}
-      >
+      <Group>
+        <Button
+          variant="transparent"
+          onClick={handleBack}
+          radius='xl'
+          className='backButton'
+          style={{
+            marginBottom: '20px',
+            color: '#228BE6',
+            backgroundColor: 'transparent',
+            fontWeight: 500,
+            fontSize: '1rem',
+          }}
+        >
         ← Back
-      </Button>
+        </Button>
+      </Group>
 
       {/* Hero Section */}
       <Title
         order={2}
         ta="center"
+        mt='1.5em'
         mb="xl"
         style={{
           fontFamily: 'Montserrat, sans-serif',
           fontWeight: 400,
-          fontSize: '2.8rem',
+          fontSize: '2.4rem',
           lineHeight: 1.2,
           color: '#333',
         }}

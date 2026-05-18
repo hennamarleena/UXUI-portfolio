@@ -414,16 +414,6 @@ h5.mantine-Title-root {
   color: var(--text-color);
 }
 
-h2.mantine-Title-root {
-  font-size: 2.5rem;
-  font-weight: 400 !important;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
 h3.mantine-Title-root {
   font-size: 1.6rem;
   font-weight: 500;
@@ -505,10 +495,7 @@ h3.mantine-Title-root {
   .hamburger {
     display: none !important;
   }
-}
 
-
-@media (min-width: 886px) {
   nav {
     display: flex !important;
     transform: none !important;
@@ -759,7 +746,13 @@ h3.mantine-Title-root {
     padding-bottom: 3em;
   }
 
-  
+    #projectPage h2 {
+    font-size: 1.8em !important;
+  }
+
+  .m_77c9d27d {
+    margin: 0 auto !important;
+  }
 
 }
 @media (max-width: 1050px) {

@@ -1,4 +1,4 @@
-import { Card, Button, Image } from '@mantine/core';
+import { Card, Button, Image, Badge } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 
 export default function ProjectCard({ projectData }) {
@@ -23,6 +23,25 @@ export default function ProjectCard({ projectData }) {
       </Card.Section>
 
       <Card.Section style={{ padding: '20px', flexGrow: 1, textAlign: 'left'  }}>
+
+      <div>
+
+        {/* tulee myöhemmin:
+        <h4>
+          {projectData.type}
+        </h4>
+        {projectData.techStack.map((tech) => (
+            <Badge
+              key={tech}
+              variant="light"
+              color="gray"
+            >
+              {tech}
+            </Badge>
+          ))} */}
+        
+        </div>
+
         <h3>{projectData.title}</h3>
         <p>{projectData.description}</p>
       </Card.Section>
