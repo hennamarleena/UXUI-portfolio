@@ -12,6 +12,7 @@ const projects = [
     links: [
       { label: "View website", url: "https://tampereenlokit.fi/" },
     ],
+    essentialTechStack: ["Figma", "CSS"],
     techStack: ["Figma", "CSS", "Tilda.cc"],
     type: "Web Design",
     description: "Full website redesign covering user flows, content structure, visual identity, and the final implementation."
@@ -25,6 +26,7 @@ const projects = [
       { label: "View demo website", url: "https://notetaker2-demo.netlify.app/" },
       { label: "GitHub", url: "https://github.com/hennamarleena/Notetaker-2.0" }
     ],
+    essentialTechStack: ["React"],
     techStack: ["React", "HTML/CSS", "Zustand", "Mantine Component Library", "React Router", "Netlify"],
     type: "UX/UI",
     description: "A note management app built with React. Redesigned with improved UI, sidebar navigation, and a harmonized color scheme."
@@ -38,6 +40,7 @@ const projects = [
       { label: "View website", url: "https://hennamarleena.netlify.app/" },
       { label: "GitHub", url: "https://github.com/hennamarleena/ArtPortfolio" }
     ],
+    essentialTechStack: ["React", "Visual design"],
     techStack: ["React", "HTML/CSS", "Illustrator", "Zustand", "Material UI", "Web3Forms", "Yet Another React Lightbox", "Netlify"],
     type: "Web Design",
     description: "A minimalist React portfolio for collage art. Includes category filtering, responsive gallery, and a contact form."
@@ -52,6 +55,7 @@ const projects = [
       { label: "View mobile prototype", url: "https://www.figma.com/proto/lRk8TzGPxnD2tZiBrRXVWL/Neonwaves-mobile?..." },
       { label: "View desktop prototype", url: "https://www.figma.com/proto/SgYV3k6ymvQhQrs2T9xP1E/Neonwaves-desktop?..." },
     ],
+    essentialTechStack: ["Figma", "Visual design"],
     techStack: ["Figma", "Adobe Illustrator", "Adobe Firefly AI"],
     type: "UI Concept",
     description: "Figma-based website concept for a fictional electronic music festival. Designed to capture the rave atmosphere and streamline ticket purchases."

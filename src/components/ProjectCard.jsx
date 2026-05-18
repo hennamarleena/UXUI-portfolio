@@ -9,45 +9,110 @@ export default function ProjectCard({ projectData }) {
   };
 
   return (
-    <Card 
-    radius="lg" 
-    style={{ 
-      width: '100%',
-      height: '100%',
-      display: 'flex', 
-      flexDirection: 'column' 
+    <Card
+      radius="lg"
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        cursor: 'default',
       }}
     >
       <Card.Section>
-        <Image src={projectData.image} alt={projectData.title} onClick={handleView} height={250} style={{ objectFit: 'cover', padding: '0px', paddingBottom: '10px', borderRadius: '0px', cursor:'pointer' }} />
+        <Image
+          src={projectData.image}
+          alt={projectData.title}
+          onClick={handleView}
+          height={250}
+          style={{
+            objectFit: 'cover',
+            cursor: 'pointer',
+          }}
+        />
       </Card.Section>
 
-      <Card.Section style={{ padding: '20px', flexGrow: 1, textAlign: 'left'  }}>
+      <Card.Section
+        style={{
+          padding: '20px',
+          flexGrow: 1,
+          textAlign: 'left',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '8px',
+            marginBottom: '16px',
+            alignItems: 'center',
+          }}
+        >
+          <Badge
+            size="md"
+            radius="xl"
+            variant="filled"
+            color="cyan"
+            style={{
+              textTransform: 'uppercase',
+              letterSpacing: '0.06em',
+              fontWeight: 700,
+            }}
+          >
+            {projectData.type}
+          </Badge>
 
-      <div>
-
-        {/* tulee myöhemmin:
-        <h4>
-          {projectData.type}
-        </h4>
-        {projectData.techStack.map((tech) => (
+          {projectData.essentialTechStack.map((tech) => (
             <Badge
               key={tech}
+              size="md"
+              radius="xl"
               variant="light"
               color="gray"
+              style={{
+                fontWeight: 500,
+              }}
             >
               {tech}
             </Badge>
-          ))} */}
-        
+          ))}
         </div>
 
-        <h3 onClick={handleView} style={{ cursor:'pointer' }}>{projectData.title}</h3>
-        <p>{projectData.description}</p>
+        <h3
+          onClick={handleView}
+          style={{
+            cursor: 'pointer',
+            margin: '0 0 5px 0',
+            fontSize: '1.5rem',
+            fontWeight: 700,
+          }}
+        >
+          {projectData.title}
+        </h3>
+
+        <p
+          style={{
+            margin: 0,
+            lineHeight: 1.6,
+          }}
+        >
+          {projectData.description}
+        </p>
       </Card.Section>
 
-      <Card.Section style={{ padding: '0px 20px 30px', textAlign: 'center' }}>
-        <Button variant="filled" radius={25} color="#39C0D6" size="md" onClick={handleView}>
+      <Card.Section
+        style={{
+          padding: '0 20px 30px',
+          textAlign: 'center',
+        }}
+      >
+        <Button
+          variant="filled"
+          radius={25}
+          color="cyan"
+          size="md"
+          onClick={handleView}
+        >
           Explore
         </Button>
       </Card.Section>
