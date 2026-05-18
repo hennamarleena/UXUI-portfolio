@@ -56,9 +56,10 @@ export default function Education() {
               <h3
                 style={{
                   fontSize: '18px',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   marginBottom: '6px',
                   lineHeight: 1.4,
+                  color: '#444',
                 }}
               >
                 {item.degree}
