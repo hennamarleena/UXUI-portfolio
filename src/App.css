@@ -257,7 +257,6 @@ nav ul li button:hover {
   bottom: -30px;
 }
 
-.skills-paper h3,
 .mantine-Card-section h3 {
   font-weight: 600;
   color: var(--text-color);
@@ -753,6 +752,15 @@ h3.mantine-Title-root {
   .m_77c9d27d {
     margin: 0 auto !important;
   }
+
+  .mantine-Carousel-root {
+    max-width: 90% !important;
+    padding: 0 0px 50px !important;
+  }
+
+  .mantine-Carousel-controls {
+  top: 30% !important;
+}
 
 }
 @media (max-width: 1050px) {

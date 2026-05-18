@@ -21,7 +21,8 @@ export default function Projects() {
       styles={{
         root: { maxWidth: '90%', 
                 margin: '0 auto', 
-                padding: '0 80px 50px' },
+                padding: '0 80px 50px' 
+              },
         control: { backgroundColor: '#39C0D6',
                    color: '#fff', 
                    border: 'none' },
