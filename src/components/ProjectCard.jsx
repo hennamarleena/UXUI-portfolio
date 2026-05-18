@@ -42,7 +42,7 @@ export default function ProjectCard({ projectData }) {
         
         </div>
 
-        <h3>{projectData.title}</h3>
+        <h3 onClick={handleView} style={{ cursor:'pointer' }}>{projectData.title}</h3>
         <p>{projectData.description}</p>
       </Card.Section>
 
