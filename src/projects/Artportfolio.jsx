@@ -11,7 +11,6 @@ export default function ArtPortfolio() {
 
           <p>
             This web project was created to showcase my collage artwork.
-            Parilla lauseella miksi tein projektin.
             The digital collages were created with Adobe Photoshop and
             Adobe Illustrator.
           </p>
