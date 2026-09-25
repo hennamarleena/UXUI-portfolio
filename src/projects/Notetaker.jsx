@@ -253,7 +253,9 @@ export default function Notetaker() {
             </p>
 
           </div>
-
+          <br />
+          <a href="https://notetaker2-demo.netlify.app/">View the live demo →</a>
+          <br />
           <br />
           <ZoomableImage
             src="/img/notetaker2-demo.netlify.app_viewnotes.png"
