@@ -85,7 +85,7 @@
 //   );
 // }
 
-import { Title, List } from "@mantine/core";
+import { Title, List, SimpleGrid } from "@mantine/core";
 import { ZoomableImage } from "../components/ZoomableImage";
 
 export default function Notetaker() {
@@ -179,7 +179,7 @@ export default function Notetaker() {
                   enter the course ID manually
                 </List.Item>
               </List>
-
+              <br />
               <p>
                 The second version focused particularly on improving the
                 user interface and making the application easier to understand
@@ -188,9 +188,10 @@ export default function Notetaker() {
             </div>
 
             <div className="project-image-large">
+              <Title order={5}>Before</Title>
               <ZoomableImage
-                src="/img/notetaker2-demo.netlify.app_home.png"
-                alt="NoteTaker 2.0 home view"
+                src="/img/notetakerdemo-before.png"
+                alt="NoteTaker before"
               />
             </div>
 
@@ -218,7 +219,7 @@ export default function Notetaker() {
                 library. Zustand is used for state management and React Router
                 handles navigation between views.
               </p>
-
+              <br />
               <p>
                 The application is deployed on Netlify.
               </p>
@@ -254,12 +255,27 @@ export default function Notetaker() {
           </div>
 
           <br />
-
           <ZoomableImage
+            src="/img/notetaker2-demo.netlify.app_viewnotes.png"
+            alt="NoteTaker 2.0"
+          />
+          <br />
+          <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} spacing="xl">
+            <ZoomableImage
             src="/img/notetaker2-demo.netlify.app_home.png"
             alt="NoteTaker 2.0"
           />
-
+          <ZoomableImage
+            src="/img/notetaker2-demo.netlify.app_addnotes.png"
+            alt="NoteTaker 2.0"
+          />
+          </SimpleGrid>
+          <br />
+          <ZoomableImage
+            src="/img/notetaker2-demo.netlify.app_newcourse.png"
+            alt="NoteTaker 2.0"
+          />
+        
         </div>
       </section>
 
