@@ -69,6 +69,7 @@ export default function ArtPortfolio() {
       </List>
     </div>
 <br />
+<br />
 
 <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xl">
   <Card
@@ -202,8 +203,8 @@ export default function ArtPortfolio() {
               interactive features that make browsing and viewing the
               artwork straightforward.
             </p>
-
-            <a href="LIVE-LINK">
+            <br />
+            <a href="https://hennamarleena.netlify.app/">
               View the live project →
             </a>
           </div>
