@@ -12,10 +12,10 @@ const projects = [
     links: [
       { label: "View website", url: "https://tampereenlokit.fi/" },
     ],
-    essentialTechStack: ["Figma", "CSS"],
-    techStack: ["Figma", "CSS", "Tilda.cc"],
+    essentialTechStack: ["Figma", "CSS", "Microsoft 365"],
+    techStack: ["Figma", "CSS", "Tilda.cc", "Microsoft 365"],
     type: "Web Design",
-    description: "Full website redesign covering user flows, content structure, visual identity, and the final implementation."
+    description: "Full website redesign covering user flows, content structure, visual identity, the final implementation and documentation."
   },
   {
     id: "Notetaker",

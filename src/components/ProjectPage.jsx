@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Image, Group, Badge, Button, Title, Container, Paper, Modal } from '@mantine/core';
+import { Image, Group, Badge, Button, Title, Paper } from '@mantine/core';
 import projects from './projectsData';
 
 // Pääsivu yksittäiselle projektille
@@ -24,7 +24,7 @@ export default function ProjectPage() {
   }, []);
 
   return (
-    <Container size="xl" px="md" py="xl" id="projectPage">
+    <div>
       {/* Back button */}
       <Group>
         <Button
@@ -80,17 +80,22 @@ export default function ProjectPage() {
       </Group>
 
       {/* Project main image */}
-      <Paper mb="xl" style={{ overflow: 'hidden' }}>
-        <Image
-          src={project.image}
-          alt={project.title}
-          fit="contain"
-          style={{ width: '100%', height: 'auto' }}
-        />
-      </Paper>
+      <section className="project-hero-image">
+        <div className="project-content">
+          <Paper className="project-main-image" style={{ overflow: 'hidden' }}>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fit="contain"
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+          </Paper>
+        </div>
+      </section>
 
       {/* Technologies */}
-      <section>
+      <section className="project-technologies-section">
+      <div className="project-content">
         <Title
           order={3}
           mb="md"
@@ -105,12 +110,13 @@ export default function ProjectPage() {
             </Badge>
           ))}
         </Group>
+        </div>
       </section>
 
 
     <ProjectComponent/>
 
     
-    </Container>
+    </div>
   );
 }

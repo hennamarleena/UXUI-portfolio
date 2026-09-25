@@ -538,6 +538,180 @@ h3.mantine-Title-root {
   font-weight: 600;
 }
 
+/*  */
+
+
+.project-section {
+  width: 100%;
+  padding: 70px 20px;
+}
+
+.project-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-section--white {
+  background-color: #fff;
+}
+
+.project-section--light {
+  background-color: #F7F7EF;
+}
+
+.project-section--accent {
+  background-color: #BEE6E7;
+}
+
+.project-section--dark {
+  background-color: #333;
+  color: white;
+}
+
+
+.project-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.project-split--wide {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.project-split--reverse {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.project-image-large {
+  width: 100%;
+}
+
+.project-image-large img {
+  width: 100%;
+  display: block;
+}
+
+.project-highlight {
+  margin: 0 auto;
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.project-hero-image {
+  padding: 20px 20px 30px;
+}
+
+.project-main-image {
+  margin: 0;
+}
+
+.project-main-image img {
+  display: block;
+}
+
+
+.project-technologies-section {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-split,
+  .project-split--wide,
+  .project-split--reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.project-solutions {
+  margin-top: 50px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.project-solution {
+
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.project-solution > span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #777;
+}
+
+.project-solution h5 {
+  margin-bottom: 8px;
+}
+
+
+.project-split--flow {
+  margin-top: 50px;
+  column-gap: 70px;
+  row-gap: 100px;
+}
+
+.project-split--flow .project-image-large {
+  display: flex;
+  align-items: center;
+}
+
+.project-split--flow .project-text {
+  align-self: center;
+}
+
+.project-split--flow .project-text p {
+  max-width: 520px;
+  margin-bottom: 1.2rem;
+}
+
+.project-split--flow h5 {
+  margin-bottom: 15px;
+}
+
+
+.project-learning p {
+  margin-bottom: 28px;
+}
+
+.project-learning p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* project cards  */
+.project-card {
+  height: 100%;
+  padding: 20px;
+}
+
+.project-card .zoomable-image {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-card .zoomable-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-card h5 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin: 0;
+}
+
+
 
 /*  */
 /*  */
