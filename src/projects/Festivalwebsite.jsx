@@ -9,7 +9,7 @@ export default function Festivalwebsite() {
   return (
     <div className="case-study-page">
 
-      {/* 01 INTRO */}
+{/* 01 INTRO */}
       <CaseStudyIntro variant="accent">
         <p>
           A conceptual website project for a fictional electronic music and
@@ -19,7 +19,7 @@ export default function Festivalwebsite() {
         </p>
       </CaseStudyIntro>
 
-      {/* 02 RESEARCH */}
+{/* 02 RESEARCH */}
       <CaseStudySection
         number={"02"}
         title="Research"
@@ -56,7 +56,7 @@ export default function Festivalwebsite() {
         />
       </CaseStudySection>
 
-      {/* 03 STYLES */}
+{/* 03 STYLES */}
       <CaseStudySection
         number={"03"}
         title="Styles"
@@ -94,7 +94,7 @@ export default function Festivalwebsite() {
         />
       </CaseStudySection>
 
-      {/* 04 FINAL RESULT */}
+{/* 04 FINAL RESULT */}
       <CaseStudyFinalResult
         number={"04"}
         title="Final result"
