@@ -5,7 +5,6 @@ export default function CaseStudyFinalResult({
   number,
   title,
   description,
-  secondaryDescription,
   link,
   linkText = "View the live project →",
   images = [],
@@ -38,21 +37,27 @@ export default function CaseStudyFinalResult({
             <br />
             <br />
 
-            <SimpleGrid
-              cols={{ base: 1, sm: 2, lg: 2 }}
-              spacing="xl"
-            >
-              {images.map((image) => (
-                <ZoomableImage
-                  key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                />
-              ))}
-            </SimpleGrid>
-          </>
+        {images.length === 1 ? (
+          <ZoomableImage
+            src={images[0].src}
+            alt={images[0].alt}
+          />
+        ) : (
+          <SimpleGrid
+            cols={{ base: 1, sm: 2, lg: 2 }}
+            spacing="xl"
+          >
+            {images.map((image) => (
+              <ZoomableImage
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+              />
+            ))}
+          </SimpleGrid>
         )}
-
+      </>
+    )}
       </div>
     </section>
   );
