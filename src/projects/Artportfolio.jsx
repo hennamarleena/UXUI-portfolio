@@ -1,50 +1,47 @@
 import { Title, List, SimpleGrid, Card } from "@mantine/core";
 import { ZoomableImage } from "../components/ZoomableImage";
+import CaseStudyIntro from "../components/case-studies/CaseStudyIntro";
+import CaseStudySection from "../components/case-studies/CaseStudySection";
+import CaseStudyFinalResult from "../components/case-studies/CaseStudyFinalResult";
+import CaseStudySplitViewTextOnly from "../components/case-studies/CaseStudySplitViewTextOnly";
 
 export default function ArtPortfolio() {
   return (
     <div>
-      {/* 01 — OVERVIEW */}
-      <section className="project-section project-section--light">
-        <div className="project-content">
-          <Title order={4}>01 — Overview</Title>
-
-          <p>
+{/* OVERVIEW */}
+      <CaseStudyIntro
+        variant={"light"}>
+        <p>
             This web project was created to showcase my collage artwork.
             The digital collages were created with Adobe Photoshop and
             Adobe Illustrator.
-          </p>
-        </div>
-      </section>
+        </p>
+      </CaseStudyIntro>
 
-      {/* 02 — VISUAL CONCEPT & LAYOUT */}
-      <section className="project-section project-section--accent">
-        <div className="project-content">
-          <Title order={4}>02 — Visual concept & layout</Title>
+{/* VISUAL CONSEPT AND LAYOUT */}
+      <CaseStudySection
+        number="02"
+        title="Visual concept & layout"
+        variant="accent"
+      >
+        <p>
+          The project was designed around a minimalist visual style
+          where the interface stays in the background and keeps the
+          focus on the artwork.
+        </p>
+        <p>
+          The layout was designed to give the collages enough space
+          while adapting to different screen sizes. 
+          The overall design was kept simple to create a calm and gallery-like browsing experience.
+        </p>
+      </CaseStudySection>
 
-          <div>
-            <div>
-              <p>
-                The project was designed around a minimalist visual style
-                where the interface stays in the background and keeps the
-                focus on the artwork.
-              </p>
-
-              <p>
-                The layout was designed to give the collages enough space
-                while adapting to different screen sizes. 
-                The overall design was kept simple to create a calm and gallery-like browsing experience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+{/* TECHNOLOGIES AND FEATURES */}
       <section className="project-section project-section--white">
-  <div className="project-content">
-    <Title order={4}>
-      03 — Technologies, features & implementation
-    </Title>
+      <div className="project-content">
+        <Title order={4}>
+          03 — Technologies, features & implementation
+        </Title>
 
     <div>
       <List spacing="sm">
@@ -190,79 +187,63 @@ export default function ArtPortfolio() {
   </div>
 </section>
 
-      
-
-      {/* 04 — FINAL RESULT */}
-      <section className="project-section project-section--accent">
-        <div className="project-content">
-          <div className="project-highlight">
-            <Title order={4}>04 — Final result</Title>
-
-            <p>
-              The final portfolio combines a minimalist interface with
+{/* FINAL RESULT */}
+    <CaseStudyFinalResult
+      number="04"
+      title="Final result"
+      variant="accent"
+      description="The final portfolio combines a minimalist interface with
               interactive features that make browsing and viewing the
-              artwork straightforward.
-            </p>
-            <br />
-            <a href="https://hennamarleena.netlify.app/">
-              View the live project →
-            </a>
-          </div>
-
-          <br />
-
-          <ZoomableImage
-            src="/img/artportfolio_final.png"
-            alt="Final Art Portfolio"
-          />
-        </div>
-      </section>
-
-      {/* 05 — WHAT I LEARNED */}
-      <section className="project-section project-section--light">
-        <div className="project-content">
-          <div className="project-split project-split--learning">
-            <div>
-              <Title order={4}>05 — What I learned</Title>
-            </div>
-
-            <div className="project-learning">
+              artwork straightforward."
+      link="https://hennamarleena.netlify.app/"
+      images={[
+        {
+          src: "/img/artportfolio_final.png",
+          alt: "Final Art Portfolio",
+        }
+      ]}
+    />
+            
+{/* WHAT I LEARNED */}
+      <CaseStudySplitViewTextOnly
+        number="05"
+        title="What I learned"
+        variant="light"
+        >
               <p>
                 <strong>React development</strong>
                 <br />
                 Building an interactive frontend using reusable React
                 components.
               </p>
-
+              <br />  
               <p>
                 <strong>State management</strong>
                 <br />
                 Using Zustand to manage application state and filtering.
               </p>
-
+              <br />  
               <p>
                 <strong>Responsive design</strong>
                 <br />
                 Creating a grid layout that adapts to different screen
                 sizes.
               </p>
-
+              <br />  
               <p>
                 <strong>Interactive interfaces</strong>
                 <br />
                 Implementing category filtering and a lightbox experience
                 for browsing artwork.
               </p>
-
+              <br />  
               <p>
                 <strong>Third-party integration</strong>
                 <br />
                 Integrating Web3Forms to handle contact form submissions.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </CaseStudySplitViewTextOnly>
+
     </div>
   );
 }
