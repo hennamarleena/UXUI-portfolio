@@ -1,15 +1,16 @@
 import { List, Title, SimpleGrid } from "@mantine/core";
 import { ZoomableImage } from "../components/ZoomableImage";
-
+import CaseStudyIntro from "../components/case-studies/CaseStudyIntro";
+import CaseStudySplitViewTextOnly from "../components/case-studies/CaseStudySplitViewTextOnly";
+import CaseStudySection from "../components/case-studies/CaseStudySection";
+import CaseStudySplit from "../components/case-studies/CaseStudySplit";
 
 export default function LokitRedesign() {
   return (
     <div>
-    
-    <section className="project-section project-section--accent">
-      <div className="project-content">
-        <div className="project-intro">
-          <Title order={4} mb="sm">01 — Project overview</Title>
+{/* OVERVIEW */}
+      <CaseStudyIntro
+        variant={"accent"}>
             <p>
               Tampereen Lokit Ry wanted to modernize its website and make it easier to navigate, more informative and easier to maintain.
             </p>
@@ -19,103 +20,124 @@ export default function LokitRedesign() {
             <p>
               The project focused on improving the site's structure, usability and visual consistency while preserving the association's existing identity.
             </p>
-        </div>
-      </div>
-    </section>
-  
-  <section className="project-section project-section--white">
-  <div className="project-content">
-    <Title order={4}>02 — Understanding the existing site</Title>
-      <p>
-        Before designing the new website, I analyzed the existing site
-        to identify usability and content issues. I also reviewed other
-        scouting websites to understand common patterns and opportunities
-        for improvement.
-      </p>
-      <br />
-    <div className="project-split project-split--wide">
-      <div>
-        <Title order={5}>Key findings</Title>
-        <List spacing="xs">
-          <List.Item>Inconsistent visual identity and limited use of imagery</List.Item>
-          <List.Item>Accessibility and navigation had usability issues</List.Item>
-          <List.Item>Important content for new visitors was missing, such as information about activities, trips, equipment, and getting started with scouting</List.Item>
-          <List.Item>The association's own logo was missing</List.Item>
-          <List.Item>Limited visibility for news and current content</List.Item>
-          <List.Item>Long text sections were difficult to read</List.Item>
-          <List.Item>No FAQ section</List.Item>
-          <List.Item>There was a need for a dedicated section for members and a reservation system for the association's cabin</List.Item>
-          <List.Item>There was a desire to highlight the association's outdoor focus more clearly</List.Item>
-        </List>
-      </div>
+      </CaseStudyIntro>
 
-      <div>
-        <Title order={5}>Before</Title>
+{/* UNDERSTANDING THE EXISTING SITE */}
+      <CaseStudySection
+        number={"02"}
+        title="Understanding the existing site"
+        variant={"white"}>
+
+        <p>
+          Before designing the new website, I analyzed the existing site
+          to identify usability and content issues. I also reviewed other
+          scouting websites to understand common patterns and opportunities
+          for improvement.
+        </p>
         <br />
-        <ZoomableImage
-          src="/img/lokit-before.png"
-          alt="Original website"
-        />
-      </div>
+        <CaseStudySplit variant="project-split--wide">
+          <div>
+            <Title order={5}>Key findings</Title>
+            <List spacing="xs">
+              <List.Item>
+                Inconsistent visual identity and limited use of imagery
+              </List.Item>
+              <List.Item>
+                Accessibility and navigation had usability issues
+              </List.Item>
+              <List.Item>
+                Important content for new visitors was missing, such as
+                information about activities, trips, equipment, and getting
+                started with scouting
+              </List.Item>
+              <List.Item>
+                The association's own logo was missing
+              </List.Item>
+              <List.Item>
+                Limited visibility for news and current content
+              </List.Item>
+              <List.Item>
+                Long text sections were difficult to read
+              </List.Item>
+              <List.Item>
+                No FAQ section
+              </List.Item>
+              <List.Item>
+                There was a need for a dedicated section for members and
+                a reservation system for the association's cabin
+              </List.Item>
+              <List.Item>
+                There was a desire to highlight the association's outdoor
+                focus more clearly
+              </List.Item>
+            </List>
+          </div>
+          <div>
+            <Title order={5}>Before</Title>
+            <br />
+            <ZoomableImage
+              src="/img/lokit-before.png"
+              alt="Original website"
+            />
+          </div>
+        </CaseStudySplit>
+      </CaseStudySection>
 
-    </div>
-  </div>
-</section>
+{/* 03 — USER FLOWS & INFORMATION ARCHITECTURE */}
+      <CaseStudySection
+        title="User flows & information architecture"
+        variant="light"
+        number={"03"}
+      >
+        <CaseStudySplit variant="project-split--flow">
 
-<section className="project-section project-section--light">
-  <div className="project-content">
+          <div className="project-image-large">
+            <ZoomableImage
+              src="/img/lokit-userflow.png"
+              alt="Website user flow"
+            />
+          </div>
 
-    <Title order={4}>
-      03 — User flows & information architecture
-    </Title>
+          <div className="project-text">
+            <Title order={5}>User flows</Title>
 
-    <div className="project-split project-split--flow">
-      
-      {/* USER FLOW */}
-      <div className="project-image-large">
-        <ZoomableImage
-          src="/img/lokit-userflow.png"
-          alt="Website user flow"
-        />
-      </div>
+            <p>
+              I identified the main target groups and considered what
+              information each group would need from the website.
+            </p>
 
-      <div className="project-text">
-        <Title order={5}>User flows</Title>
-        <p>
-          I identified the main target groups and considered what information
-          each group would need from the website.
-        </p>
-        <p>
-          I then created user flows and a content hierarchy to define how
-          visitors could move through the site.
-        </p>
-      </div>
+            <p>
+              I then created user flows and a content hierarchy to define
+              how visitors could move through the site.
+            </p>
+          </div>
 
-      {/* WIREFRAMES */}
-      <div className="project-text">
-        <Title order={5}>Wireframes</Title>
-        <p>
-          Based on the initial information architecture, I created wireframes
-          to explore the structure and layout of the new site.
-        </p>
-        <p>
-          The original concept included a sidebar navigation for subpages.
-          Due to platform limitations, the navigation was simplified during
-          implementation.
-        </p>
-      </div>
+          <div className="project-text">
+            <Title order={5}>Wireframes</Title>
 
-      <div className="project-image-large">
-        <ZoomableImage
-          src="/img/lokit-wireframes.png"
-          alt="Examples of wireframes"
-        />
-      </div>
+            <p>
+              Based on the initial information architecture, I created
+              wireframes to explore the structure and layout of the new site.
+            </p>
 
-    </div>
-  </div>
-</section>
+            <p>
+              The original concept included a sidebar navigation for
+              subpages. Due to platform limitations, the navigation was
+              simplified during implementation.
+            </p>
+          </div>
 
+          <div className="project-image-large">
+            <ZoomableImage
+              src="/img/lokit-wireframes.png"
+              alt="Examples of wireframes"
+            />
+          </div>
+
+        </CaseStudySplit>
+      </CaseStudySection>
+
+{/* 04 - VISUAL DESIGN */}
 <section className="project-section">
   <div className="project-content">
 
@@ -150,16 +172,12 @@ export default function LokitRedesign() {
   </div>
 </section>
 
-<section className="project-section project-section--light">
-  <div className="project-content">
-
-    <div className="project-split project-split--implementation">
-
-      <div>
-        <Title order={4}>05 — Implementation</Title>
-      </div>
-
-      <div>
+{/* IMPLEMENTATION */}
+      <CaseStudySplitViewTextOnly
+        number="05"
+        title="Implementation"
+        variant="light"
+        >
         <List spacing="xs">
           <List.Item>The website was built with Tilda platform, using its existing content
           blocks and Zero Block for more customized layouts.</List.Item>
@@ -168,13 +186,10 @@ export default function LokitRedesign() {
           <List.Item>The original designs were also adapted during implementation
           based on platform limitations and feedback.</List.Item>
         </List>
-      </div>
+      </CaseStudySplitViewTextOnly>
 
-    </div>
 
-  </div>
-</section>
-
+{/* SOLUTIONS */}
 <section className="project-section project-section--white">
   <div className="project-content">
 
@@ -216,6 +231,7 @@ export default function LokitRedesign() {
   </div>
 </section>
 
+{/* FINAL RESULT */}
 <section className="project-section project-section--accent">
   <div className="project-content">
 
@@ -252,14 +268,12 @@ export default function LokitRedesign() {
   </div>
 </section>
 
-<section className="project-section project-section--white">
-  <div className="project-content">
-
-    <div className="project-split">
-      <div>
-        <Title order={4}>08 — Documentation & handover</Title>
-      </div>
-
+{/* DOCUMENTATION AND HANDOVER */}
+      <CaseStudySplitViewTextOnly
+        number="08"
+        title="Documentation & handover"
+        variant="white"
+        >
       <div>
         <p>
           One of my responsibilities was documenting the project and
@@ -271,54 +285,44 @@ export default function LokitRedesign() {
           guidance for future content updates.
         </p>
       </div>
-    </div>
+      </CaseStudySplitViewTextOnly>
 
-  </div>
-</section>
 
-<section className="project-section project-section--light">
-  <div className="project-content">
-
-    <div className="project-split project-split--learning">
-
+{/* WHAT I LEARNED */}
+      <CaseStudySplitViewTextOnly
+        number="09"
+        title="What I learned"
+        variant="light"
+        >
       <div>
-        <Title order={4}>09 — What I learned</Title>
-      </div>
-
-      <div className="project-learning">
-
-          <p>
-            <strong>UX & information architecture</strong><br />
-            Planning user flows and organizing complex content.
-          </p>
-           
-          <p>
+            <p>
+              <strong>UX & information architecture</strong><br />
+              Planning user flows and organizing complex content.
+            </p>
+            <br />
+            <p>
             <strong>Problem solving</strong><br />
             Finding practical solutions within platform limitations.
           </p>
-       
+        <br />
           <p>
             <strong>Client communication</strong><br />
             Adapting the design based on client needs and feedback.
           </p>
-      
+        <br />
           <p>
             <strong>Independent work</strong><br />
             Managing a website project from concept to implementation.
           </p>
-        
+        <br />
           <p>
             <strong>Documentation</strong><br />
             Creating clear maintenance instructions for the client.
           </p>
+
       </div>
-
-    </div>
-
-  </div>
-</section>
-
-
+      </CaseStudySplitViewTextOnly>
+      
     </div>
   );
 }
