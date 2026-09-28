@@ -4,9 +4,10 @@ export default function CaseStudyIntro({
     number = "01",
     title = "Project overview",
     children,
+    variant,
 }) {
   return (
-    <section className="project-section project-section--accent">
+    <section className={`project-section project-section--${variant}`}>
         <div className="project-content">
           <div className="project-intro">
 
