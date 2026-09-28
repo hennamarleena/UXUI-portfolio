@@ -10,7 +10,7 @@ import CaseStudyFinalResult from "../components/case-studies/CaseStudyFinalResul
 export default function Notetaker() {
   return (
     <div>
-      {/* 01 - OVERVIEW */}
+{/* 01 - OVERVIEW */}
       <CaseStudyIntro
         variant={"accent"}>
         <p>
@@ -28,7 +28,7 @@ export default function Notetaker() {
         </p>
       </CaseStudyIntro>
 
-      {/* 02 — ORIGINAL REQUIREMENTS */}
+{/* 02 — ORIGINAL REQUIREMENTS */}
       <CaseStudySection
         number="02"
         title="Original requirements"
@@ -48,7 +48,7 @@ export default function Notetaker() {
           </List>
       </CaseStudySection>
 
-      {/* 03 — DEVELOPMENT & IMPROVEMENTS */}
+{/* 03 — DEVELOPMENT & IMPROVEMENTS */}
       <CaseStudySection
         number="03"
         title="Development & improvements"
