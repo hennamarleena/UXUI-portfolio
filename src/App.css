@@ -711,7 +711,9 @@ h3.mantine-Title-root {
   margin: 0;
 }
 
-
+.notetaker-before-carousel {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
 
 /*  */
 /*  */
