@@ -4,31 +4,38 @@ import CaseStudyIntro from "../components/case-studies/CaseStudyIntro";
 import CaseStudySection from "../components/case-studies/CaseStudySection";
 import CaseStudyFinalResult from "../components/case-studies/CaseStudyFinalResult";
 import CaseStudyGallery from "../components/case-studies/CaseStudyGallery";
+import CaseStudySplitViewTextOnly from "../components/case-studies/CaseStudySplitViewTextOnly";
 
 export default function Festivalwebsite() {
   return (
     <div className="case-study-page">
 
-{/* 01 INTRO */}
+{/* 01 - INTRO */}
       <CaseStudyIntro variant="accent">
         <p>
           A conceptual website project for a fictional electronic music and
-          culture festival. The aim was to design a website concept that
-          embodies the festival's atmosphere, engages visitors, and inspires
-          them to explore the event, ultimately leading to ticket purchases.
+          culture festival. The goal was to create a website concept that
+          reflects the atmosphere of the festival, encourages 
+          visitors to explore the event, and guides them towards ticket purchases.
         </p>
+        <br />
+        <p>The website concept and interactive prototype were built in Figma.</p>
       </CaseStudyIntro>
 
-{/* 02 RESEARCH */}
+{/* 02 - RESEARCH & STRUCTURE */}
       <CaseStudySection
         number={"02"}
-        title="Research"
+        title="Research & structure"
         variant="white"
       >
         <p>
-          I analysed several festival websites and identified trends and
-          effective solutions that I could apply to the project. The following
-          features were implemented to support the project goal:
+        I analysed several festival websites to identify common patterns, effective solutions, and opportunities for improving the user experience.
+        </p>
+
+        <br />
+
+        <p>
+        Based on the research, I defined key features and interactions for the concept:
         </p>
 
         <List spacing="sm" mb="md">
@@ -36,15 +43,21 @@ export default function Festivalwebsite() {
             Persistent ticket purchase links in the header and footer for easy access
           </List.Item>
           <List.Item>
-            Collapsible info sections for a cleaner layout
+            Collapsible information sections to keep the interface clean and focused
           </List.Item>
           <List.Item>
-            Festival program filtering by date or event type
+            Festival program filtering by date and event type
           </List.Item>
           <List.Item>
-            Minimalist mobile navigation with a hamburger menu
+            A minimalist mobile navigation with a hamburger menu
           </List.Item>
         </List>
+
+        <p>
+          I first created wireframes in Figma to explore the page structure, content hierarchy, and user flow before moving on to the visual design.
+        </p>
+
+        <br />
 
         <Title order={5} mt="lg">
           Wireframes
@@ -56,30 +69,33 @@ export default function Festivalwebsite() {
         />
       </CaseStudySection>
 
-{/* 03 STYLES */}
+{/* 03 VISUAL DESIGN */}
       <CaseStudySection
         number={"03"}
-        title="Styles"
+        title="Visual design"
         variant="light"
       >
         <p>
-          The design was inspired by futuristic and urban aesthetics, using
-          neon colors against dark backgrounds to create a "rave" feeling.
-          I wanted to evoke the essence of electronic music through vibrant
-          neon hues and smooth, flowing graphic elements. Rounded corners
-          and circular shapes were used to create a fluid and dynamic visual
-          style reinforcing a sense of movement.
+          The visual direction was inspired by futuristic and urban aesthetics commonly associated with electronic music and rave culture.
+        </p>
+        <br />
+        <p>
+          Neon colours against dark backgrounds create a strong contrast and help establish an energetic atmosphere. 
+          Rounded corners, circular shapes, and flowing graphic elements add a sense of movement and make the interface feel more fluid and dynamic.
         </p>
 
         <List spacing="sm" mb="md">
           <List.Item>
-            Artist images and photographs were generated with Adobe Firefly AI
+            The visual design was created in Figma, including the colour palette, typography, layouts and UI components.
           </List.Item>
           <List.Item>
-            Graphics were designed using Adobe Illustrator
+             Artist imagery and photographs were generated with Adobe Firefly AI. 
+          </List.Item>
+          <List.Item>
+             Supporting graphic elements were created using Adobe Illustrator.
           </List.Item>
         </List>
-
+        <br />
         <CaseStudyGallery
           images={[
             {
@@ -94,11 +110,35 @@ export default function Festivalwebsite() {
         />
       </CaseStudySection>
 
-{/* 04 FINAL RESULT */}
-      <CaseStudyFinalResult
+      <CaseStudySection
         number={"04"}
+        title="Interactive prototype"
+        variant="accent"
+      >
+        <List spacing="sm" mb="md">
+          <List.Item>
+            The final website concept was brought to life as an interactive prototype in Figma.
+          </List.Item>
+          <List.Item>
+             I created interactions for navigation, filtering the festival program, opening information sections, 
+            and moving between key pages such as the program, tickets, and information sections.
+          </List.Item>
+          <List.Item>
+             The prototype allowed me to test the overall user flow and demonstrate how the final 
+          website experience would work.
+          </List.Item>
+        </List>
+        <a href="https://www.figma.com/proto/lRk8TzGPxnD2tZiBrRXVWL/Neonwaves-mobile?...">View mobile prototype →</a>
+        <br />
+        <a href="https://www.figma.com/proto/SgYV3k6ymvQhQrs2T9xP1E/Neonwaves-desktop?...">View desktop prototype →</a>
+      </CaseStudySection>
+
+{/* 05 FINAL RESULT */}
+      <CaseStudyFinalResult
+        number={"05"}
         title="Final result"
         variant="white"
+        description={"The final design combines the visual direction with the functional requirements identified during the research phase. The result is a dark, immersive festival website where the program, event information, and ticket purchasing remain easy to access."}
         images={[
           {
             src: "/img/neonwaves-home-view.png",
@@ -118,6 +158,23 @@ export default function Festivalwebsite() {
           },
         ]}
       />
+{/* WHAT I LEARNED */}
+        <CaseStudySplitViewTextOnly
+          number="06"
+          title="What I learned"
+          variant="light"
+          >
+            <p>
+              This project gave me an opportunity to explore how visual design can
+              support the atmosphere and identity of an event while keeping
+              navigation and important actions clear.
+            </p>
+            <br />
+            <p> 
+              I also gained experience in designing and prototyping in Figma.
+            </p>
+                    
+        </CaseStudySplitViewTextOnly>
 
     </div>
   );
