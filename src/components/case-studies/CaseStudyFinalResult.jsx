@@ -7,7 +7,7 @@ export default function CaseStudyFinalResult({
   description,
   secondaryDescription,
   link,
-  linkText = "View the live demo →",
+  linkText = "View the live project →",
   images = [],
   variant = "accent",
 }) {
